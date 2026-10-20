@@ -1,5 +1,5 @@
 /**
- * Registro de «Los acentos del español» en Google Sheets.
+ * Registro de «Cartografía dialectal del español» en Google Sheets.
  *
  * Recibe los eventos que envía la web (POST con un JSON: un evento o una lista de eventos)
  * y los guarda en la pestaña «Eventos». Después rehace la pestaña «Resumen»:
@@ -39,7 +39,7 @@ function doPost(e) {
 
 // Para comprobar que la URL funciona: ábrela en el navegador y debe decir «ok».
 function doGet() {
-  return respuesta_({ ok: true, mensaje: 'Registro de Los acentos del español funcionando' });
+  return respuesta_({ ok: true, mensaje: 'Registro de Cartografía dialectal del español funcionando' });
 }
 
 /** Rehace la pestaña «Resumen» (equipos en filas, regiones en columnas). */

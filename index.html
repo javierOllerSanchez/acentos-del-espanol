@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Los acentos del español</title>
+  <title>Cartografía dialectal del español</title>
   <meta name="description" content="Mapa interactivo de las variedades del español en el mundo para 6.º de Primaria.">
   <meta name="theme-color" content="#1e4f8a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
   <header class="cabecera">
     <div class="marca" id="logo">
       <span class="marca-logo" aria-hidden="true">ñ</span>
-      <span class="marca-texto">Los acentos<br>del español</span>
+      <span class="marca-texto">Cartografía dialectal<br>del español</span>
     </div>
 
     <div class="progreso" role="status">
@@ -28,9 +28,14 @@
       <span class="progreso-barra" aria-hidden="true"><span id="progresoRelleno"></span></span>
     </div>
 
+    <button type="button" class="btn btn-curiosidades" id="abrirCuriosidades">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>
+      Curiosidades
+    </button>
+
     <div class="equipo">
       <span class="equipo-nombre" id="equipoNombre"></span>
-      <button type="button" class="btn btn-sutil" id="cambiarEquipo">Cambiar de equipo</button>
+      <button type="button" class="btn btn-sutil" id="cambiarEquipo"><span class="solo-ancho">Cambiar de equipo</span><span class="solo-movil">Equipo</span></button>
     </div>
   </header>
 
@@ -63,7 +68,7 @@
         </button>
         <button type="button" class="btn btn-mundo" id="zoomMundo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.6 3.6 5.4 3.6 8.5s-1 5.9-3.6 8.5c-2.6-2.6-3.6-5.4-3.6-8.5s1-5.9 3.6-8.5z"/></svg>
-          Volver al mundo
+          Ver mundo entero
         </button>
       </div>
 
@@ -72,23 +77,13 @@
       <p class="aviso-carga" id="avisoCarga">Cargando el mapa…</p>
     </section>
 
-    <aside class="panel" id="panel" aria-labelledby="panelTitulo" hidden>
-      <div class="panel-asa" aria-hidden="true"></div>
-      <button type="button" class="btn-icono panel-cerrar" id="cerrarPanel" aria-label="Cerrar el panel">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-      <div class="panel-cuerpo" id="panelCuerpo"></div>
-      <div class="panel-pie">
-        <button type="button" class="btn btn-primario" id="marcarVista" aria-pressed="false">Marcar como vista</button>
-      </div>
-    </aside>
   </main>
 
   <!-- Identificación del equipo -->
   <dialog class="dlg dlg-equipo" id="dlgEquipo" aria-labelledby="eqTitulo">
     <form class="equipo-form" id="formEquipo" novalidate>
       <span class="marca-logo marca-logo-grande" aria-hidden="true">ñ</span>
-      <h1 id="eqTitulo">Los acentos del español</h1>
+      <h1 id="eqTitulo">Cartografía dialectal del español</h1>
       <p class="equipo-intro">Más de 500 millones de personas hablan español, y cada lugar le pone su propia música. Antes de empezar, presentad a vuestro equipo.</p>
 
       <label class="campo">
@@ -109,6 +104,26 @@
         <button type="submit" class="btn btn-primario btn-grande">Empezar a explorar</button>
       </div>
     </form>
+  </dialog>
+
+  <!-- Región (ventana central) -->
+  <dialog class="dlg dlg-region" id="dlgRegion" aria-labelledby="panelTitulo">
+    <button type="button" class="btn-icono panel-cerrar" data-cerrar aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="panel-cuerpo" id="panelCuerpo"></div>
+    <div class="panel-pie" id="estadoVista" aria-live="polite"></div>
+  </dialog>
+
+  <!-- Curiosidades -->
+  <dialog class="dlg dlg-curiosidades" id="dlgCuriosidades" aria-labelledby="curTitulo">
+    <div class="dlg-cab">
+      <h2 id="curTitulo">Curiosidades del mundo hispanohablante</h2>
+      <button type="button" class="btn-icono" data-cerrar aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cur-cuerpo" id="curCuerpo"></div>
   </dialog>
 
   <!-- Visor de recursos -->

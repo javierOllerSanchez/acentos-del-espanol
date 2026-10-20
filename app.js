@@ -10,6 +10,8 @@ const APPS_SCRIPT_URL = "";
 const PIN_PROFESOR = "1234";
 // A partir de este nivel de zoom España se ve dividida en regiones.
 const ZOOM_REGIONES_ES = 3.2;
+// Segundos que un equipo debe tener abierta una región para que cuente como explorada.
+const SEGUNDOS_VISTA = 180;
 
 /* ========================================================= */
 
@@ -484,14 +486,9 @@ function crearMapa(mundo, espana, relieve) {
     });
   svg.call(zoom).on("dblclick.zoom", null);
 
-  // Zona del mapa que no tapan el panel ni la lista
+  // Zona del mapa que no tapa la lista
   function margenes() {
     const m = { l: 0, r: 0, t: 0, b: 0 };
-    const panel = $("#panel");
-    if (!panel.hidden) {
-      if (esMovil()) m.b = panel.offsetHeight;
-      else m.r = panel.offsetWidth;
-    }
     if (document.body.classList.contains("lista-abierta") && !esAncho() && !esMovil()) m.l = $("#lista").offsetWidth;
     return m;
   }
@@ -571,122 +568,107 @@ function crearMapa(mundo, espana, relieve) {
 }
 
 /* =========================================================
-   SELECCIÓN Y PANEL
+   SELECCIÓN Y VENTANA DE REGIÓN
    ========================================================= */
-let focoPrevio = null;
+const dlgRegion = $("#dlgRegion");
 
 function seleccionar(id) {
   const r = porId.get(id);
   if (!r) return;
-  if (!$("#panel").contains(document.activeElement)) focoPrevio = document.activeElement;
   seleccion = id;
   document.querySelectorAll(".item").forEach(b => b.setAttribute("aria-current", b.dataset.id === id ? "true" : "false"));
   pintarPanel(r);
-  $("#panel").hidden = false;
-  document.body.classList.add("panel-abierto");
+  if (!dlgRegion.open) dlgRegion.showModal();
   $("#panelCuerpo").scrollTop = 0;
   $("#panelTitulo").focus({ preventScroll: true });
   $("#leyenda").classList.add("desvanecida");
   mapa.seleccionar(id);
   registrar("Abrir región", r);
+  iniciarReloj();
 }
 
-function cerrarPanel() {
-  if ($("#panel").hidden) return;
-  $("#panel").hidden = true;
-  document.body.classList.remove("panel-abierto");
+function cerrarPanel() { if (dlgRegion.open) dlgRegion.close(); }
+dlgRegion.addEventListener("close", () => {
   seleccion = null;
+  clearInterval(reloj);
   document.querySelectorAll(".item[aria-current]").forEach(b => b.setAttribute("aria-current", "false"));
   mapa.deseleccionar();
-  if (focoPrevio && document.contains(focoPrevio) && focoPrevio !== document.body) focoPrevio.focus({ preventScroll: true });
-}
-$("#cerrarPanel").addEventListener("click", cerrarPanel);
+});
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape" && !document.querySelector("dialog[open]")) {
-    if (!$("#panel").hidden) cerrarPanel();
-    else if (document.body.classList.contains("lista-abierta") && !esAncho()) { cerrarLista(); $("#abrirLista").focus(); }
+  if (e.key === "Escape" && !document.querySelector("dialog[open]") && document.body.classList.contains("lista-abierta") && !esAncho()) {
+    cerrarLista(); $("#abrirLista").focus();
   }
   if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "p") { e.preventDefault(); pedirPin(); }
 });
 
-const CATEGORIAS = [
-  ["pronunciacion", "Pronunciación", "🗣️"],
-  ["gramatica", "Gramática", "🧩"],
-  ["vocabulario", "Vocabulario", "📚"],
-];
+/* --- Marcado automático: la región cuenta como vista tras tenerla abierta SEGUNDOS_VISTA seguidos --- */
+let reloj = null, segundos = 0;
+const mmss = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+
+function iniciarReloj() {
+  clearInterval(reloj);
+  segundos = 0;
+  pintarReloj();
+  reloj = setInterval(() => {
+    if (document.hidden || !seleccion) return; // con la pestaña oculta no cuenta
+    segundos++;
+    if (segundos >= SEGUNDOS_VISTA && equipo && !vistas.has(seleccion)) {
+      const r = porId.get(seleccion);
+      marcarVista(r.id, true);
+      registrar("Marcar como vista", r, `Automático (${mmss(SEGUNDOS_VISTA)} abierta)`);
+    }
+    pintarReloj();
+  }, 1000);
+}
+
+function pintarReloj() {
+  const pie = $("#estadoVista");
+  if (!seleccion) return;
+  if (vistas.has(seleccion)) {
+    pie.replaceChildren(h("span", { class: "p-vista" }, "✓ Región explorada"));
+    clearInterval(reloj);
+    return;
+  }
+  const falta = Math.max(0, SEGUNDOS_VISTA - segundos);
+  pie.replaceChildren(
+    h("span", { class: "reloj-texto" }, "Se marcará como explorada en ", h("strong", {}, mmss(falta))),
+    h("span", { class: "reloj-barra", "aria-hidden": "true" }, h("span", { style: `width:${(100 * segundos) / SEGUNDOS_VISTA}%` })));
+  pie.setAttribute("aria-live", falta % 60 === 0 ? "polite" : "off"); // no anunciar cada segundo
+}
 
 // Windows no muestra banderas emoji: usamos el SVG equivalente (flag-icons, MIT)
-function bandera(r) {
+function bandera(r, clase = "p-bandera") {
   const cod = [...(r.bandera || "")].map(c => String.fromCharCode(c.codePointAt(0) - 127397)).join("").toLowerCase();
   if (!/^[a-z]{2}$/.test(cod)) return null;
-  return h("img", { class: "p-bandera", src: `https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/flags/4x3/${cod}.svg`, alt: "", width: 48, height: 36 });
+  return h("img", { class: clase, src: `https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/flags/4x3/${cod}.svg`, alt: "", width: 48, height: 36 });
 }
 
 function pintarPanel(r) {
-  const vista = vistas.has(r.id);
-  $("#panel").style.setProperty("--color-region", r.color);
-  $("#panelCuerpo").replaceChildren(
+  dlgRegion.style.setProperty("--color-region", r.color);
+  $("#panelCuerpo").replaceChildren(...[
     h("header", { class: "p-cab" },
       bandera(r),
-      h("h2", { id: "panelTitulo", tabindex: "-1" }, r.nombre),
-      r.zona ? h("p", { class: "p-zona" }, r.zona) : null,
-      h("p", { class: "p-intro" }, r.intro),
-      vista ? h("span", { class: "p-vista" }, "✓ Ya la habéis visto") : null),
-
-    h("section", { class: "p-seccion", "aria-labelledby": "secRasgos" },
-      h("h3", { id: "secRasgos" }, "Rasgos principales"),
-      CATEGORIAS.filter(([k]) => r.rasgos?.[k]?.length).map(([k, titulo, ico]) =>
-        h("div", { class: "rasgo" },
-          h("h4", {}, h("span", { class: "ico", "aria-hidden": "true" }, ico), titulo),
-          h("ul", {}, r.rasgos[k].map(t => h("li", {}, t)))))),
-
-    r.recursos?.length ? h("section", { class: "p-seccion", "aria-labelledby": "secRecursos" },
+      h("div", {},
+        h("h2", { id: "panelTitulo", tabindex: "-1" }, r.nombre),
+        r.zona ? h("p", { class: "p-zona" }, r.zona) : null)),
+    r.intro ? h("p", { class: "p-intro" }, r.intro) : null,
+    h("section", { class: "p-seccion", "aria-labelledby": "secRecursos" },
       h("h3", { id: "secRecursos" }, "Recursos"),
-      h("div", { class: "recursos" }, r.recursos.map(rec => tarjetaRecurso(rec, r)))) : null,
-
-    r.quiz?.length ? h("section", { class: "p-seccion", "aria-labelledby": "secQuiz" },
-      h("h3", { id: "secQuiz" }, "¿Correcto o incorrecto?"),
-      h("p", { class: "p-ayuda" }, "Los rasgos dialectales son correctos; los vulgarismos son incorrectos en cualquier lugar. ¿Sabéis distinguirlos?"),
-      h("ol", { class: "quiz" }, r.quiz.map(preguntaQuiz))) : null,
-  );
-  const btn = $("#marcarVista");
-  btn.setAttribute("aria-pressed", String(vista));
-  btn.textContent = vista ? "✓ Vista · pulsad para desmarcar" : "Marcar como vista";
-}
-
-$("#marcarVista").addEventListener("click", () => {
-  const r = porId.get(seleccion);
-  if (!r || !equipo) return;
-  const si = !vistas.has(r.id);
-  marcarVista(r.id, si);
-  registrar(si ? "Marcar como vista" : "Desmarcar vista", r);
-  pintarPanel(r);
-});
-
-function preguntaQuiz(q) {
-  const fb = h("p", { class: "quiz-fb", "aria-live": "polite" });
-  const li = h("li", {});
-  const responder = (resp, boton) => {
-    const ok = resp === q.correcta;
-    li.classList.add(ok ? "acierto" : "fallo");
-    botones.forEach(b => { b.disabled = true; if ((b.dataset.v === "true") === q.correcta) b.classList.add("es-correcta"); });
-    boton.dataset.elegida = "true";
-    fb.replaceChildren(
-      h("strong", {}, (ok ? "¡Bien! " : "¡Casi! ") + (q.correcta ? "Es correcta." : "Es incorrecta.")), " ",
-      q.explicacion);
-  };
-  const botones = [
-    h("button", { type: "button", class: "btn", "data-v": "true", onclick: e => responder(true, e.currentTarget) }, "✓ Correcto"),
-    h("button", { type: "button", class: "btn", "data-v": "false", onclick: e => responder(false, e.currentTarget) }, "✗ Incorrecto"),
-  ];
-  li.append(h("p", { class: "frase" }, `«${q.frase}»`), h("div", { class: "opciones" }, botones), fb);
-  return li;
+      r.recursos?.length
+        ? h("div", { class: "recursos" }, r.recursos.map(rec => tarjetaRecurso(rec, r)))
+        : h("div", { class: "p-vacio" },
+          h("p", {}, "Todavía no hay vídeos, audios ni enlaces para esta región."),
+          h("p", {}, "Pronto los añadiremos. ¡Mientras tanto, seguid explorando el mapa!"))),
+  ].filter(Boolean));
+  pintarReloj();
 }
 
 /* =========================================================
    RECURSOS
    ========================================================= */
-const TIPOS = { youtube: "Vídeo", vimeo: "Vídeo", audio: "Audio", libro: "Lectura", web: "Página web" };
+const TIPOS = { youtube: "Vídeo", vimeo: "Vídeo", audio: "Audio", archivo: "Archivo", libro: "Lectura", web: "Página web" };
+const esImagen = u => /\.(png|jpe?g|gif|webp|svg|avif)(\?|#|$)/i.test(u);
+const esPdf = u => /\.pdf(\?|#|$)/i.test(u);
 const esPendiente = rec => !rec.url || rec.url === "PENDIENTE";
 const urlSegura = u => { try { const x = new URL(u, location.href); return /^https?:$/.test(x.protocol) ? x.href : null; } catch { return null; } };
 
@@ -737,7 +719,7 @@ function tarjetaRecurso(rec, region) {
       h("div", { class: "tarjeta-cuerpo" }, cab));
   }
 
-  const accion = { vimeo: "Ver el vídeo", audio: "Escuchar", web: "Ver la página" }[rec.tipo] || "Abrir";
+  const accion = { vimeo: "Ver el vídeo", audio: "Escuchar", web: "Ver la página", archivo: "Abrir el archivo" }[rec.tipo] || "Abrir";
   return h("article", { class: "tarjeta" }, h("div", { class: "tarjeta-cuerpo" }, cab,
     h("button", { type: "button", class: "btn btn-primario", onclick: () => abrirMedia(rec, region) },
       rec.tipo === "audio" || rec.tipo === "vimeo" ? svgIcono('<path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/>') : null,
@@ -770,6 +752,13 @@ function abrirMedia(rec, region) {
       : vistaWeb(rec, url);
   } else if (rec.tipo === "audio") {
     contenido = reproductor(url, rec.titulo);
+  } else if (rec.tipo === "archivo" && esImagen(url)) {
+    contenido = h("img", { class: "media-imagen", src: url, alt: rec.descripcion || rec.titulo });
+  } else if (rec.tipo === "archivo" && esPdf(url)) {
+    contenido = h("div", { class: "web" }, h("iframe", { src: url, title: rec.titulo }));
+  } else if (rec.tipo === "archivo") {
+    contenido = h("div", { class: "p-vacio" }, h("p", {}, rec.descripcion || "Este archivo se abre fuera de la página."),
+      h("a", { class: "btn btn-primario", href: url, target: "_blank", rel: "noopener" }, "Abrir o descargar ↗"));
   } else if (rec.tipo === "libro") {
     contenido = h("blockquote", { class: "lectura lectura-grande", style: `--color-region:${region.color}` },
       h("p", {}, rec.texto || ""),
@@ -778,9 +767,9 @@ function abrirMedia(rec, region) {
     contenido = vistaWeb(rec, url);
   }
 
-  cuerpo.replaceChildren(contenido,
+  cuerpo.replaceChildren(...[contenido,
     rec.fuente && rec.tipo !== "libro" ? h("div", { class: "media-pie" }, h("p", {}, "Fuente: ", rec.fuente),
-      url && rec.tipo !== "web" ? h("a", { class: "btn btn-sutil", href: url, target: "_blank", rel: "noopener" }, "Abrir en pestaña nueva ↗") : null) : null);
+      url && rec.tipo !== "web" ? h("a", { class: "btn btn-sutil", href: url, target: "_blank", rel: "noopener" }, "Abrir en pestaña nueva ↗") : null) : null].filter(Boolean));
   dlgMedia.showModal();
   registrar("Abrir recurso", region, `${TIPOS[rec.tipo] || rec.tipo}: ${rec.titulo}`);
 }
@@ -827,6 +816,29 @@ function reproductor(url, titulo) {
   barra.addEventListener("input", () => { if (audio.duration) audio.currentTime = (barra.value / 100) * audio.duration; });
   return h("div", {}, h("div", { class: "audio" }, audio, play, h("div", { class: "audio-pista" }, barra, tiempo)), error);
 }
+
+/* =========================================================
+   CURIOSIDADES
+   ========================================================= */
+const dlgCur = $("#dlgCuriosidades");
+let curiosidades = null;
+
+$("#abrirCuriosidades").addEventListener("click", async () => {
+  dlgCur.showModal();
+  registrar("Abrir curiosidades", null);
+  if (curiosidades) return;
+  $("#curCuerpo").replaceChildren(h("p", { class: "p-vacio" }, "Cargando…"));
+  try {
+    curiosidades = await fetch("data/curiosidades.json").then(r => { if (!r.ok) throw 0; return r.json(); });
+  } catch {
+    $("#curCuerpo").replaceChildren(h("p", { class: "p-vacio" }, "No se han podido cargar las curiosidades. Revisad la conexión."));
+    return;
+  }
+  $("#curCuerpo").replaceChildren(h("div", { class: "cur-rejilla" }, curiosidades.map(c =>
+    h("article", { class: "cur-tarjeta", style: `--color-region:${porId.get(c.id)?.color || "#E8A27C"}` },
+      h("header", {}, bandera(c, "cur-bandera"), h("div", {}, h("h4", {}, c.nombre), h("span", { class: "cur-zona" }, c.grupo))),
+      h("ul", {}, c.curiosidades.map(t => h("li", {}, t)))))));
+});
 
 /* =========================================================
    PANEL DEL PROFESOR
@@ -893,14 +905,14 @@ const hoy = () => new Date().toLocaleDateString("sv-SE");
 
 $("#exportarEventos").addEventListener("click", () => {
   const { registro } = datosResumen();
-  descargarCSV(`acentos-eventos-${hoy()}.csv`, [
+  descargarCSV(`cartografia-eventos-${hoy()}.csv`, [
     ["Fecha", "Equipo", "Integrantes", "Región", "Acción", "Recurso"],
     ...registro.map(e => [e.fecha, e.equipo, e.integrantes, e.region, e.accion, e.recurso]),
   ]);
 });
 $("#exportarResumen").addEventListener("click", () => {
   const { equipos, celda } = datosResumen();
-  descargarCSV(`acentos-resumen-${hoy()}.csv`, [
+  descargarCSV(`cartografia-resumen-${hoy()}.csv`, [
     ["Región", ...equipos],
     ...REGIONES.map(r => [r.nombre, ...equipos.map(eq => celda(eq, r.id))]),
   ]);

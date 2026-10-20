@@ -1,0 +1,235 @@
+[
+  {
+    "id": "es",
+    "nombre": "España",
+    "grupo": "Europa",
+    "bandera": "🇪🇸",
+    "curiosidades": [
+      "El español también se llama «castellano» porque nació en el antiguo reino de Castilla, en la Edad Media.",
+      "En las Glosas Emilianenses, escritas en el monasterio de San Millán de la Cogolla (La Rioja), aparecen algunas de las primeras palabras escritas en romance de la península.",
+      "Además del castellano, en algunas comunidades son oficiales el catalán (o valenciano), el gallego y el euskera.",
+      "La Real Academia Española se fundó en 1713."
+    ]
+  },
+  {
+    "id": "mx",
+    "nombre": "México",
+    "grupo": "América del Norte",
+    "bandera": "🇲🇽",
+    "curiosidades": [
+      "Es el país con más hablantes de español del mundo: más de 120 millones de personas.",
+      "Además del español, se reconocen 68 lenguas indígenas. La más hablada es el náhuatl, la lengua de los aztecas.",
+      "Palabras como «chocolate», «tomate» y «aguacate» vienen del náhuatl.",
+      "Ciudad de México está construida sobre un antiguo lago, donde estaba Tenochtitlan, la capital azteca."
+    ]
+  },
+  {
+    "id": "gt",
+    "nombre": "Guatemala",
+    "grupo": "Centroamérica",
+    "bandera": "🇬🇹",
+    "curiosidades": [
+      "Además del español, allí se hablan 22 lenguas mayas, el garífuna y el xinca.",
+      "En Tikal, en plena selva, se conservan templos mayas de hace más de mil años.",
+      "Su moneda se llama quetzal, como el ave nacional, de plumas verdes brillantes."
+    ]
+  },
+  {
+    "id": "hn",
+    "nombre": "Honduras",
+    "grupo": "Centroamérica",
+    "bandera": "🇭🇳",
+    "curiosidades": [
+      "Su moneda, el lempira, lleva el nombre de un jefe indígena que luchó contra los conquistadores.",
+      "En Copán hay una gran ciudad maya con una escalinata llena de jeroglíficos.",
+      "A los hondureños se les llama «catrachos», por el apellido del general Florencio Xatruch."
+    ]
+  },
+  {
+    "id": "sv",
+    "nombre": "El Salvador",
+    "grupo": "Centroamérica",
+    "bandera": "🇸🇻",
+    "curiosidades": [
+      "Es el país más pequeño de Centroamérica continental y el único que no tiene costa en el mar Caribe.",
+      "La pupusa, su plato más famoso, tiene su propio día nacional: el segundo domingo de noviembre.",
+      "Tiene muchos volcanes. El más alto es el de Santa Ana."
+    ]
+  },
+  {
+    "id": "ni",
+    "nombre": "Nicaragua",
+    "grupo": "Centroamérica",
+    "bandera": "🇳🇮",
+    "curiosidades": [
+      "Es el país más grande de Centroamérica.",
+      "El lago Cocibolca (lago de Nicaragua) es el más grande de Centroamérica, y en él viven tiburones que llegan desde el mar por el río San Juan.",
+      "Allí nació Rubén Darío, el poeta que renovó la poesía en español con el modernismo."
+    ]
+  },
+  {
+    "id": "cr",
+    "nombre": "Costa Rica",
+    "grupo": "Centroamérica",
+    "bandera": "🇨🇷",
+    "curiosidades": [
+      "En 1948 decidió quedarse sin ejército.",
+      "Aunque es un país pequeño, alberga alrededor del 5 % de todas las especies de seres vivos del planeta.",
+      "A los costarricenses se les llama «ticos» porque usan mucho el diminutivo «-ico»: «chiquitico», «momentico»."
+    ]
+  },
+  {
+    "id": "pa",
+    "nombre": "Panamá",
+    "grupo": "Centroamérica",
+    "bandera": "🇵🇦",
+    "curiosidades": [
+      "El canal de Panamá, inaugurado en 1914, une el océano Atlántico con el Pacífico.",
+      "Por la forma del país, en algunos lugares se puede ver salir el sol por el Pacífico.",
+      "Su moneda oficial es el balboa, pero en la vida diaria se usa el dólar estadounidense."
+    ]
+  },
+  {
+    "id": "cu",
+    "nombre": "Cuba",
+    "grupo": "Caribe",
+    "bandera": "🇨🇺",
+    "curiosidades": [
+      "Es la isla más grande del Caribe.",
+      "Allí vive el zunzuncito, un colibrí que es el ave más pequeña del mundo.",
+      "La palabra «huracán» viene del taíno, la lengua de los primeros habitantes del Caribe."
+    ]
+  },
+  {
+    "id": "do",
+    "nombre": "República Dominicana",
+    "grupo": "Caribe",
+    "bandera": "🇩🇴",
+    "curiosidades": [
+      "Santo Domingo es la ciudad más antigua fundada por europeos en América que sigue habitada.",
+      "El pico Duarte, de más de 3000 metros, es la montaña más alta del Caribe.",
+      "El merengue, su baile nacional, es Patrimonio Cultural Inmaterial de la Humanidad."
+    ]
+  },
+  {
+    "id": "pr",
+    "nombre": "Puerto Rico",
+    "grupo": "Caribe",
+    "bandera": "🇵🇷",
+    "curiosidades": [
+      "Es un territorio de Estados Unidos con dos idiomas oficiales: el español y el inglés.",
+      "El coquí, una ranita diminuta que canta «co-quí» por las noches, es el símbolo de la isla.",
+      "El Yunque es el único bosque tropical lluvioso del sistema de bosques nacionales de Estados Unidos."
+    ]
+  },
+  {
+    "id": "co",
+    "nombre": "Colombia",
+    "grupo": "América del Sur",
+    "bandera": "🇨🇴",
+    "curiosidades": [
+      "Es el país con más especies de aves del mundo.",
+      "Es el único país de América del Sur con costa en dos océanos: el Pacífico y el Atlántico (mar Caribe).",
+      "Allí nació Gabriel García Márquez, autor de «Cien años de soledad» y premio Nobel de Literatura en 1982."
+    ]
+  },
+  {
+    "id": "ve",
+    "nombre": "Venezuela",
+    "grupo": "América del Sur",
+    "bandera": "🇻🇪",
+    "curiosidades": [
+      "El salto Ángel, de 979 metros, es la cascada más alta del mundo.",
+      "Su nombre significa «pequeña Venecia», por las casas sobre el agua (palafitos) que vieron los exploradores en el lago de Maracaibo.",
+      "El caraqueño Andrés Bello escribió en 1847 una famosa gramática de la lengua castellana pensada para los americanos."
+    ]
+  },
+  {
+    "id": "ec",
+    "nombre": "Ecuador",
+    "grupo": "América del Sur",
+    "bandera": "🇪🇨",
+    "curiosidades": [
+      "Su nombre viene de la línea del ecuador, que atraviesa el país.",
+      "Las islas Galápagos, que pertenecen a Ecuador, inspiraron a Charles Darwin sus ideas sobre la evolución.",
+      "La cima del volcán Chimborazo es el punto de la Tierra más alejado del centro del planeta."
+    ]
+  },
+  {
+    "id": "pe",
+    "nombre": "Perú",
+    "grupo": "América del Sur",
+    "bandera": "🇵🇪",
+    "curiosidades": [
+      "Machu Picchu, la ciudad inca en lo alto de los Andes, es una de las siete maravillas del mundo moderno.",
+      "Además del español, el quechua y el aimara también son lenguas oficiales.",
+      "La papa se cultivó por primera vez en los Andes, y en Perú hay miles de variedades."
+    ]
+  },
+  {
+    "id": "bo",
+    "nombre": "Bolivia",
+    "grupo": "América del Sur",
+    "bandera": "🇧🇴",
+    "curiosidades": [
+      "Tiene dos capitales: Sucre, la capital constitucional, y La Paz, donde está el gobierno.",
+      "Su Constitución reconoce como oficiales el español y 36 lenguas indígenas.",
+      "El salar de Uyuni es el desierto de sal más grande del mundo. Cuando llueve, se convierte en un espejo gigante."
+    ]
+  },
+  {
+    "id": "cl",
+    "nombre": "Chile",
+    "grupo": "América del Sur",
+    "bandera": "🇨🇱",
+    "curiosidades": [
+      "Es uno de los países más largos y estrechos del mundo: mide más de 4000 km de norte a sur.",
+      "El desierto de Atacama es el desierto no polar más seco del planeta.",
+      "Dos poetas chilenos ganaron el premio Nobel: Gabriela Mistral (1945) y Pablo Neruda (1971)."
+    ]
+  },
+  {
+    "id": "ar",
+    "nombre": "Argentina",
+    "grupo": "América del Sur",
+    "bandera": "🇦🇷",
+    "curiosidades": [
+      "Es el país hispanohablante más grande del mundo.",
+      "El Aconcagua, con casi 7000 metros, es la montaña más alta de América.",
+      "El tango nació a orillas del Río de la Plata y es Patrimonio Cultural Inmaterial de la Humanidad."
+    ]
+  },
+  {
+    "id": "uy",
+    "nombre": "Uruguay",
+    "grupo": "América del Sur",
+    "bandera": "🇺🇾",
+    "curiosidades": [
+      "Organizó y ganó el primer Mundial de fútbol de la historia, en 1930.",
+      "En Uruguay hay muchas más vacas que personas.",
+      "Es muy habitual ver a la gente por la calle con el termo bajo el brazo para tomar mate."
+    ]
+  },
+  {
+    "id": "py",
+    "nombre": "Paraguay",
+    "grupo": "América del Sur",
+    "bandera": "🇵🇾",
+    "curiosidades": [
+      "El guaraní es lengua oficial junto al español, y lo habla la mayoría de la población.",
+      "La presa de Itaipú, que comparte con Brasil, es una de las centrales hidroeléctricas más grandes del mundo.",
+      "Su bandera es distinta por cada lado: el escudo del anverso no es igual que el del reverso."
+    ]
+  },
+  {
+    "id": "gq",
+    "nombre": "Guinea Ecuatorial",
+    "grupo": "África",
+    "bandera": "🇬🇶",
+    "curiosidades": [
+      "Es el único país de África donde el español es lengua oficial.",
+      "Su capital, Malabo, no está en el continente, sino en la isla de Bioko.",
+      "Fue colonia española hasta 1968, año en que se independizó."
+    ]
+  }
+]
