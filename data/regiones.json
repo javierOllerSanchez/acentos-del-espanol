@@ -1,0 +1,1951 @@
+[
+  {
+    "id": "ar",
+    "nombre": "Argentina",
+    "grupo": "América del Sur",
+    "bandera": "🇦🇷",
+    "color": "#93B5E3",
+    "intro": "En Argentina se dice «vos tenés» en vez de «tú tienes», y la «ll» y la «y» suenan casi como una «sh». Es el español del Río de la Plata, que comparte con Uruguay.",
+    "rasgos": {
+      "pronunciacion": [
+        "Yeísmo rehilado: «yo» y «calle» se pronuncian con un sonido parecido a «sh» o «zh» (algo así como «sho», «cashe»).",
+        "Seseo: «casa» y «caza» suenan igual, con /s/. Es lo normal en toda América.",
+        "Aspiración de la /s/ al final de sílaba en mucha gente: «lo' mismo'» por «los mismos».",
+        "Entonación «cantada», con influencia del italiano que hablaban muchos inmigrantes."
+      ],
+      "gramatica": [
+        "Voseo: se usa «vos» en lugar de «tú», con sus propias formas verbales: «vos tenés», «vos sabés», «vení», «mirá». Es la forma culta y correcta en Argentina.",
+        "«Ustedes» en lugar de «vosotros»: «ustedes tienen razón».",
+        "Se prefiere el pretérito simple: «hoy comí pizza» en vez de «hoy he comido pizza»."
+      ],
+      "vocabulario": [
+        "che: palabra para llamar la atención («Che, ¿venís?»).",
+        "pibe / piba: chico, chica.",
+        "colectivo: autobús.",
+        "frutilla: fresa.",
+        "pileta: piscina.",
+        "remera: camiseta.",
+        "laburo: trabajo (viene del lunfardo, la jerga de Buenos Aires)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Hablantes de Buenos Aires: el voseo en la calle",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: Dialectoteca del español o RTVE",
+        "descripcion": "Vídeo breve con personas de Buenos Aires hablando. Fijaos en cómo pronuncian «yo» y «calle»."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación grabada en Argentina",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: corpus PRESEEA",
+        "descripcion": "Audio de una entrevista real. Contad cuántas veces aparece «vos»."
+      },
+      {
+        "tipo": "libro",
+        "titulo": "Martín Fierro",
+        "autor": "José Hernández",
+        "obra": "El gaucho Martín Fierro",
+        "anio": "1872",
+        "url": "",
+        "fuente": "Poema nacional argentino",
+        "descripcion": "Así empieza el poema más famoso de Argentina. El autor escribe como hablaban los gauchos: fijaos en «vigüela» (guitarra) y «estraordinaria».",
+        "texto": "Aquí me pongo a cantar\nal compás de la vigüela,\nque el hombre que lo desvela\nuna pena estraordinaria,\ncomo la ave solitaria\ncon el cantar se consuela."
+      },
+      {
+        "tipo": "web",
+        "titulo": "El voseo en el Diccionario panhispánico de dudas",
+        "url": "https://www.rae.es/dpd/voseo",
+        "fuente": "Real Academia Española y ASALE",
+        "descripcion": "Explicación oficial de qué es el voseo y en qué países se usa."
+      },
+      {
+        "tipo": "vimeo",
+        "titulo": "Documental sobre el lunfardo",
+        "url": "PENDIENTE",
+        "fuente": "Vimeo",
+        "descripcion": "Las palabras de la calle de Buenos Aires y de dónde vienen."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Vos tenés que venir mañana.",
+        "correcta": true,
+        "explicacion": "Es voseo, un rasgo dialectal. En Argentina es la forma culta y correcta de tratar a alguien de confianza."
+      },
+      {
+        "frase": "Ayer andé mucho por el centro.",
+        "correcta": false,
+        "explicacion": "Es un vulgarismo en cualquier país. Lo correcto es «anduve»."
+      },
+      {
+        "frase": "Che, ¿me pasás la frutilla?",
+        "correcta": true,
+        "explicacion": "«Che», el voseo («pasás») y «frutilla» son rasgos del español rioplatense. Todo correcto."
+      }
+    ]
+  },
+  {
+    "id": "bo",
+    "nombre": "Bolivia",
+    "grupo": "América del Sur",
+    "bandera": "🇧🇴",
+    "color": "#EACB6E",
+    "intro": "En Bolivia el español convive con el quechua, el aimara y el guaraní, y se nota en la pronunciación y en muchas palabras.",
+    "rasgos": {
+      "pronunciacion": [
+        "En el altiplano (La Paz, Oruro) la /s/ final se pronuncia con claridad: «las casas».",
+        "En zonas andinas se distingue «ll» de «y»: «pollo» no suena igual que «poyo».",
+        "La «rr» suena asibilada, parecida a una «zh»: «carro».",
+        "Las vocales sin acento a veces se pronuncian muy débiles."
+      ],
+      "gramatica": [
+        "«Nomás» para suavizar una petición: «pase nomás».",
+        "Voseo en algunas zonas, como Santa Cruz o Tarija: «vos sabés».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "wawa o guagua: bebé (del quechua y el aimara).",
+        "chompa: jersey.",
+        "api: bebida caliente de maíz morado.",
+        "colla / camba: persona del altiplano / persona del oriente."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español de La Paz",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Escuchad cómo se pronuncia la /s/ final."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista grabada en Bolivia",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Conversación real de un hablante boliviano."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Pase nomás, está abierto.",
+        "correcta": true,
+        "explicacion": "«Nomás» es un rasgo dialectal muy extendido en América. Es correcto."
+      },
+      {
+        "frase": "Nosotros semos de La Paz.",
+        "correcta": false,
+        "explicacion": "«Semos» es un vulgarismo. Lo correcto en todas partes es «somos»."
+      }
+    ]
+  },
+  {
+    "id": "cl",
+    "nombre": "Chile",
+    "grupo": "América del Sur",
+    "bandera": "🇨🇱",
+    "color": "#E8A27C",
+    "intro": "El español de Chile es rápido, con muchas palabras propias y una forma muy especial de tratar a los amigos: «¿cómo estái?».",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración o pérdida de la /s/ final: «lah casah».",
+        "El grupo «tr» suena casi como una sola consonante: «otro», «tres».",
+        "Seseo y yeísmo, como en casi toda América."
+      ],
+      "gramatica": [
+        "Voseo verbal informal: «¿cómo estái?», «¿cachái?», usando «tú» como pronombre. Es propio de la conversación entre amigos; en situaciones formales se usa «tú» o «usted».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "cachar: entender («¿cachái?»).",
+        "fome: aburrido.",
+        "pololo / polola: novio, novia.",
+        "al tiro: enseguida.",
+        "guagua: bebé."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Palabras chilenas explicadas",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: canal de una televisión chilena",
+        "descripcion": "Vídeo sobre el vocabulario chileno."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Santiago",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Audio de hablantes de Santiago de Chile."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "¿Cachái lo que te digo?",
+        "correcta": true,
+        "explicacion": "Es voseo verbal chileno, un rasgo dialectal propio de la conversación informal. Correcto entre amigos."
+      },
+      {
+        "frase": "Haiga sido como haiga sido, ganamos.",
+        "correcta": false,
+        "explicacion": "«Haiga» es un vulgarismo en cualquier variedad. Lo correcto es «haya»."
+      },
+      {
+        "frase": "Mi pololo llega al tiro.",
+        "correcta": true,
+        "explicacion": "«Pololo» y «al tiro» son léxico chileno. Correcto."
+      }
+    ]
+  },
+  {
+    "id": "co",
+    "nombre": "Colombia",
+    "grupo": "América del Sur",
+    "bandera": "🇨🇴",
+    "color": "#EACB6E",
+    "intro": "Colombia tiene muchas formas de hablar: el español de Bogotá, el de la costa caribe y el «paisa» de Medellín suenan muy distintos.",
+    "rasgos": {
+      "pronunciacion": [
+        "En Bogotá la /s/ final se pronuncia con claridad.",
+        "En la costa caribe (Cartagena, Barranquilla) la /s/ se aspira: «lo' amigo'».",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Ustedeo: en Bogotá mucha gente usa «usted» incluso con la familia y los amigos.",
+        "Voseo en la zona paisa (Antioquia) y en el Valle del Cauca: «vos sabés».",
+        "Diminutivo en «-ico» detrás de «t»: «un momentico», «un ratico».",
+        "«Regalar» para pedir algo con cortesía: «¿me regala un tinto?»."
+      ],
+      "vocabulario": [
+        "tinto: café solo.",
+        "parcero / parce: amigo.",
+        "bacano / chévere: estupendo.",
+        "plata: dinero."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Bogotá, Medellín y Cartagena: tres acentos",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Comparad tres acentos de un mismo país."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Medellín",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Escuchad el voseo paisa."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "¿Me regala un tinto, por favor?",
+        "correcta": true,
+        "explicacion": "Es una forma colombiana y cortés de pedir un café. Rasgo dialectal correcto."
+      },
+      {
+        "frase": "No vino nadien a la fiesta.",
+        "correcta": false,
+        "explicacion": "«Nadien» es un vulgarismo. Lo correcto es «nadie»."
+      }
+    ]
+  },
+  {
+    "id": "ec",
+    "nombre": "Ecuador",
+    "grupo": "América del Sur",
+    "bandera": "🇪🇨",
+    "color": "#7EC8C0",
+    "intro": "En Ecuador se oyen dos grandes acentos: el de la Sierra (Quito) y el de la Costa (Guayaquil). El quichua ha dejado muchas palabras.",
+    "rasgos": {
+      "pronunciacion": [
+        "En la Sierra la /s/ final se conserva y ante vocal suena como una /z/: «lo[z] amigos».",
+        "En la Costa la /s/ se aspira: «lah casah».",
+        "En la Sierra la «rr» suena asibilada y se distingue «ll» de «y»."
+      ],
+      "gramatica": [
+        "«Dar» + gerundio para pedir un favor, por influencia del quichua: «dame cerrando la puerta» (= ciérrame la puerta, por favor). Es un uso regional, propio del registro coloquial.",
+        "«Ustedes» en lugar de «vosotros»; en la Sierra también se oye el voseo entre amigos."
+      ],
+      "vocabulario": [
+        "ñaño / ñaña: hermano, hermana.",
+        "guagua: bebé.",
+        "¡achachay!: ¡qué frío! (del quichua).",
+        "¡arrarray!: ¡qué calor! (del quichua)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Sierra y Costa: dos acentos ecuatorianos",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Comparad cómo suena la /s/."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en Quito",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla de la Sierra ecuatoriana."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Mi ñaño llega mañana.",
+        "correcta": true,
+        "explicacion": "«Ñaño» es léxico propio de Ecuador. Correcto."
+      },
+      {
+        "frase": "Ayer yo andé por el parque.",
+        "correcta": false,
+        "explicacion": "«Andé» es un vulgarismo. Lo correcto es «anduve»."
+      }
+    ]
+  },
+  {
+    "id": "py",
+    "nombre": "Paraguay",
+    "grupo": "América del Sur",
+    "bandera": "🇵🇾",
+    "color": "#EBA0BC",
+    "intro": "Paraguay es un país bilingüe: casi todo el mundo habla español y guaraní, y las dos lenguas se mezclan en la vida diaria.",
+    "rasgos": {
+      "pronunciacion": [
+        "La /s/ final se conserva más que en Argentina.",
+        "La «rr» suena asibilada.",
+        "En algunas zonas se distingue «ll» de «y»."
+      ],
+      "gramatica": [
+        "Voseo: «vos sos», «vos tenés».",
+        "Partículas del guaraní que suavizan las órdenes: «vení na» (ven, porfa), «¿qué pasó pa?»."
+      ],
+      "vocabulario": [
+        "mitaí: niño (del guaraní).",
+        "tereré: mate frío, la bebida nacional.",
+        "chipa: panecillo de almidón y queso.",
+        "jaha: ¡vamos! (del guaraní)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Español y guaraní en Asunción",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Escuchad cómo se mezclan las dos lenguas."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Paraguay",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Audio de hablantes paraguayos."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Vení na un ratito.",
+        "correcta": true,
+        "explicacion": "El voseo y la partícula guaraní «na» son rasgos del español paraguayo. Correcto en conversación."
+      },
+      {
+        "frase": "Los chicos vinieron y trajieron chipa.",
+        "correcta": false,
+        "explicacion": "«Trajieron» es un vulgarismo. Lo correcto es «trajeron»."
+      }
+    ]
+  },
+  {
+    "id": "pe",
+    "nombre": "Perú",
+    "grupo": "América del Sur",
+    "bandera": "🇵🇪",
+    "color": "#BCA7E0",
+    "intro": "En Perú se habla el español de Lima, el andino y el amazónico. El quechua y el aimara han prestado muchas palabras que usamos todos.",
+    "rasgos": {
+      "pronunciacion": [
+        "En Lima la /s/ final se pronuncia bien y hay seseo y yeísmo.",
+        "En los Andes muchos hablantes distinguen «ll» de «y».",
+        "Entre hablantes bilingües de quechua a veces se confunden «e/i» y «o/u», porque el quechua solo tiene tres vocales."
+      ],
+      "gramatica": [
+        "«Ustedes» en lugar de «vosotros».",
+        "«Nomás» y diminutivos para ser amable: «espérame un ratito nomás»."
+      ],
+      "vocabulario": [
+        "palta: aguacate (del quechua).",
+        "choclo: mazorca de maíz (del quechua).",
+        "chamba: trabajo.",
+        "pata: amigo.",
+        "chompa: jersey."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español de Lima y de los Andes",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Dos acentos peruanos."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en Lima",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla culta de Lima."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Pásame la palta, por favor.",
+        "correcta": true,
+        "explicacion": "«Palta» es la palabra peruana (y de otros países andinos) para «aguacate». Correcto."
+      },
+      {
+        "frase": "Habían muchos niños en la fiesta.",
+        "correcta": false,
+        "explicacion": "Aunque se oye mucho, la norma culta en todos los países pide «había muchos niños», porque «haber» con este sentido no tiene plural."
+      }
+    ]
+  },
+  {
+    "id": "uy",
+    "nombre": "Uruguay",
+    "grupo": "América del Sur",
+    "bandera": "🇺🇾",
+    "color": "#A9CC8A",
+    "intro": "Uruguay comparte con Argentina el español rioplatense, pero tiene palabras propias y, en la frontera con Brasil, mucho contacto con el portugués.",
+    "rasgos": {
+      "pronunciacion": [
+        "Yeísmo rehilado: «yo» y «calle» suenan con «sh» o «zh».",
+        "Seseo.",
+        "En el norte, cerca de Brasil, influencia del portugués."
+      ],
+      "gramatica": [
+        "Voseo; en Montevideo también se oye «tú» con verbo de vos: «tú tenés».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "ta: vale, de acuerdo.",
+        "gurí / gurisa: niño, niña (del guaraní).",
+        "championes: zapatillas de deporte.",
+        "ómnibus: autobús."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Hablar uruguayo",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Palabras y acento de Montevideo."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Montevideo",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla de Montevideo."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Ta, nos vemos mañana.",
+        "correcta": true,
+        "explicacion": "«Ta» es una forma uruguaya de decir «vale». Correcto en conversación."
+      },
+      {
+        "frase": "Si tendría plata, compraría championes.",
+        "correcta": false,
+        "explicacion": "Usar el condicional después de «si» es incorrecto. Lo correcto es «si tuviera plata»."
+      }
+    ]
+  },
+  {
+    "id": "ve",
+    "nombre": "Venezuela",
+    "grupo": "América del Sur",
+    "bandera": "🇻🇪",
+    "color": "#EBA0BC",
+    "intro": "El español de Venezuela es caribeño en la costa y andino en las montañas. «Chévere» y «pana» son algunas de sus palabras más conocidas.",
+    "rasgos": {
+      "pronunciacion": [
+        "En la costa la /s/ final se aspira o se pierde: «lah casa'».",
+        "En los Andes venezolanos la /s/ se conserva.",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "«Más» delante de «nada», «nunca» o «nadie»: «no quiero más nada».",
+        "Voseo en el estado Zulia (Maracaibo).",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "chévere: estupendo.",
+        "pana: amigo.",
+        "chamo / chama: chico, chica.",
+        "cambur: plátano.",
+        "arepa: torta de maíz."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Palabras venezolanas",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Vocabulario de Venezuela."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Caracas",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla de Caracas."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "No quiero más nada, gracias.",
+        "correcta": true,
+        "explicacion": "El orden «más nada» es un rasgo del español caribeño y de Canarias. Correcto."
+      },
+      {
+        "frase": "Asín no se hace el ejercicio.",
+        "correcta": false,
+        "explicacion": "«Asín» es un vulgarismo. Lo correcto es «así»."
+      }
+    ]
+  },
+  {
+    "id": "mx",
+    "nombre": "México",
+    "grupo": "América del Norte",
+    "bandera": "🇲🇽",
+    "color": "#E8A27C",
+    "intro": "México es el país con más hablantes de español del mundo. Su forma de hablar está llena de palabras que vienen del náhuatl, la lengua de los aztecas.",
+    "rasgos": {
+      "pronunciacion": [
+        "Seseo: «casa» y «caza» suenan igual.",
+        "En el centro del país la /s/ final se pronuncia con mucha fuerza: «las casas».",
+        "Las vocales sin acento a veces casi desaparecen: «pues» suena «ps», «trastes» suena «trasts».",
+        "El grupo «tl» de las palabras de origen náhuatl se pronuncia junto: «a-tlas», «Popocatépetl»."
+      ],
+      "gramatica": [
+        "«Ustedes» en lugar de «vosotros»: «ustedes van».",
+        "Muchos diminutivos, incluso en adverbios: «ahorita», «cerquita», «adiosito».",
+        "«¿Mande?» para pedir que te repitan algo, de forma muy educada.",
+        "Se prefiere el pretérito simple: «hoy fui al mercado».",
+        "«Hasta» marca el momento en que empieza algo: «abren hasta las diez» quiere decir que abren a las diez."
+      ],
+      "vocabulario": [
+        "Palabras del náhuatl que usa todo el mundo: chocolate, tomate, aguacate, chicle.",
+        "Palabras del náhuatl propias de México: cacahuate (cacahuete), elote (mazorca), popote (pajita), guajolote (pavo), chamaco (niño).",
+        "padre / padrísimo: genial.",
+        "camión: autobús.",
+        "güero / güera: persona rubia."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Palabras del náhuatl en el español de México",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: canal educativo mexicano o RTVE",
+        "descripcion": "Vídeo sobre las palabras que el español tomó de los aztecas."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Ciudad de México",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: corpus PRESEEA",
+        "descripcion": "Escuchad cómo suena la /s/ final. ¿Es fuerte o suave?"
+      },
+      {
+        "tipo": "libro",
+        "titulo": "Redondillas",
+        "autor": "Sor Juana Inés de la Cruz",
+        "obra": "Redondillas («Hombres necios»)",
+        "anio": "1689",
+        "url": "",
+        "fuente": "Poeta novohispana del siglo XVII",
+        "descripcion": "Fijaos: Sor Juana, que vivía en México, usa «acusáis» y «sois». En el siglo XVII también en América se usaba «vosotros» en la escritura.",
+        "texto": "Hombres necios que acusáis\na la mujer sin razón,\nsin ver que sois la ocasión\nde lo mismo que culpáis."
+      },
+      {
+        "tipo": "web",
+        "titulo": "Centro Virtual Cervantes",
+        "url": "https://cvc.cervantes.es/",
+        "fuente": "Instituto Cervantes",
+        "descripcion": "Portal del Instituto Cervantes con materiales sobre el español en el mundo."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Ahorita te lo traigo.",
+        "correcta": true,
+        "explicacion": "Los diminutivos en adverbios como «ahorita» son un rasgo dialectal mexicano. Correcto."
+      },
+      {
+        "frase": "Que no haiga problema.",
+        "correcta": false,
+        "explicacion": "«Haiga» es un vulgarismo en cualquier variedad. Lo correcto es «haya»."
+      },
+      {
+        "frase": "Pásame un popote, por favor.",
+        "correcta": true,
+        "explicacion": "«Popote» es la palabra mexicana para la pajita de beber. Léxico dialectal correcto."
+      }
+    ]
+  },
+  {
+    "id": "us",
+    "nombre": "Estados Unidos",
+    "grupo": "América del Norte",
+    "bandera": "🇺🇸",
+    "color": "#C8D3E0",
+    "intro": "En Estados Unidos viven más de 40 millones de personas que hablan español. Allí el español convive a diario con el inglés.",
+    "rasgos": {
+      "pronunciacion": [
+        "Depende del origen de las familias: en el suroeste suena parecido al mexicano; en Nueva York y Florida, al caribeño.",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Alternancia de lenguas: los bilingües pasan del español al inglés en la misma conversación («vamos a la playa this weekend»).",
+        "Calcos del inglés: «llamar para atrás» (de «call back») en vez de «devolver la llamada». Se recomienda evitarlos en registro formal."
+      ],
+      "vocabulario": [
+        "Préstamos del inglés adaptados: «parquear» (aparcar), «lonche» (almuerzo), «troca» (camioneta).",
+        "La Academia Norteamericana de la Lengua Española estudia esta variedad."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español en Estados Unidos",
+        "url": "PENDIENTE",
+        "fuente": "Instituto Cervantes",
+        "descripcion": "Cuántas personas lo hablan y dónde."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación bilingüe en Nueva York",
+        "url": "PENDIENTE",
+        "fuente": "Corpus de español en EE. UU.",
+        "descripcion": "Escuchad la alternancia entre español e inglés."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Te llamo para atrás en cinco minutos.",
+        "correcta": false,
+        "explicacion": "Es un calco del inglés «call back». En registro formal se dice «te devuelvo la llamada»."
+      },
+      {
+        "frase": "Voy a parquear el carro.",
+        "correcta": true,
+        "explicacion": "«Parquear» y «carro» son palabras usadas en buena parte de América y están en el diccionario. Correcto."
+      }
+    ]
+  },
+  {
+    "id": "gt",
+    "nombre": "Guatemala",
+    "grupo": "Centroamérica",
+    "bandera": "🇬🇹",
+    "color": "#7EC8C0",
+    "intro": "En Guatemala el español convive con más de veinte lenguas mayas. Los guatemaltecos se llaman a sí mismos «chapines».",
+    "rasgos": {
+      "pronunciacion": [
+        "La /s/ final se conserva.",
+        "La «rr» suena asibilada.",
+        "La «j» es suave, casi una /h/ aspirada."
+      ],
+      "gramatica": [
+        "Voseo entre amigos («vos sos», «hacé»), junto con «usted».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "patojo / patoja: niño, niña.",
+        "chapín: guatemalteco.",
+        "chilero: estupendo.",
+        "chucho: perro."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español de Guatemala",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Acento y palabras chapinas."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Ciudad de Guatemala",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Habla guatemalteca."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Vos sos mi mejor amigo.",
+        "correcta": true,
+        "explicacion": "El voseo es un rasgo dialectal de Centroamérica. Correcto."
+      },
+      {
+        "frase": "¿Fuistes al mercado ayer?",
+        "correcta": false,
+        "explicacion": "«Fuistes» es un vulgarismo. Lo correcto es «fuiste»."
+      }
+    ]
+  },
+  {
+    "id": "hn",
+    "nombre": "Honduras",
+    "grupo": "Centroamérica",
+    "bandera": "🇭🇳",
+    "color": "#EACB6E",
+    "intro": "Los hondureños se llaman «catrachos». Su español es centroamericano, con voseo y la /s/ final suave.",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración de la /s/: «lah casah».",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Voseo: «vos tenés», «vení».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "cipote / cipota: niño, niña.",
+        "pisto: dinero.",
+        "catracho: hondureño.",
+        "chele: persona de piel clara."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Hablar catracho",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Vocabulario hondureño."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Tegucigalpa",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Habla de Honduras."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Los cipotes están jugando.",
+        "correcta": true,
+        "explicacion": "«Cipote» es léxico centroamericano. Correcto."
+      },
+      {
+        "frase": "Yo no sabo la respuesta.",
+        "correcta": false,
+        "explicacion": "«Sabo» es un error de conjugación. Lo correcto es «sé»."
+      }
+    ]
+  },
+  {
+    "id": "sv",
+    "nombre": "El Salvador",
+    "grupo": "Centroamérica",
+    "bandera": "🇸🇻",
+    "color": "#EBA0BC",
+    "intro": "El Salvador es el país más pequeño de Centroamérica. Allí se dice «¡qué chivo!» cuando algo es genial.",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración de la /s/ en muchas posiciones.",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Voseo: «vos sos», «vos querés».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "chivo: genial, estupendo.",
+        "bicho / bicha: niño, niña (¡ojo, en otros países significa «insecto»!).",
+        "pupusa: torta de maíz rellena, el plato nacional.",
+        "guanaco: salvadoreño."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Palabras salvadoreñas",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Vocabulario de El Salvador."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en San Salvador",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Habla salvadoreña."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "¡Qué chivo está el partido!",
+        "correcta": true,
+        "explicacion": "«Chivo» con el sentido de «genial» es léxico salvadoreño. Correcto."
+      },
+      {
+        "frase": "Me se cayó el lápiz.",
+        "correcta": false,
+        "explicacion": "El orden «me se» es un vulgarismo. Lo correcto es «se me cayó»."
+      }
+    ]
+  },
+  {
+    "id": "ni",
+    "nombre": "Nicaragua",
+    "grupo": "Centroamérica",
+    "bandera": "🇳🇮",
+    "color": "#BCA7E0",
+    "intro": "En Nicaragua el voseo es la forma de tratamiento de confianza en todo el país, y la /s/ final casi no se oye.",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración muy fuerte de la /s/: «ehto» por «esto».",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Voseo general: «vos tenés», «decime».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "chavalo / chavala: niño, niña.",
+        "tuani: bonito, genial.",
+        "chele: persona rubia o de piel clara.",
+        "pinolero: nicaragüense (por el pinol, una bebida de maíz)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español de Nicaragua",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Acento nicaragüense."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Managua",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Habla de Managua."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Esa canción está tuani.",
+        "correcta": true,
+        "explicacion": "«Tuani» es léxico nicaragüense. Correcto en conversación."
+      },
+      {
+        "frase": "Habemos muchos estudiantes en clase.",
+        "correcta": false,
+        "explicacion": "«Habemos» con este sentido es un vulgarismo. Lo correcto es «somos muchos» o «hay muchos»."
+      }
+    ]
+  },
+  {
+    "id": "cr",
+    "nombre": "Costa Rica",
+    "grupo": "Centroamérica",
+    "bandera": "🇨🇷",
+    "color": "#A9CC8A",
+    "intro": "Los costarricenses, «ticos», saludan con «¡pura vida!» y usan «usted» hasta con sus hijos y sus mascotas.",
+    "rasgos": {
+      "pronunciacion": [
+        "La «rr» y el grupo «tr» suenan asibilados.",
+        "La /s/ final se conserva.",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Ustedeo: «usted» se usa también con amigos y familia.",
+        "Voseo en algunas zonas y situaciones.",
+        "Diminutivo en «-ico»: «chiquitico», «momentico» (de ahí «tico»)."
+      ],
+      "vocabulario": [
+        "pura vida: saludo, «todo bien».",
+        "mae: tío, colega.",
+        "brete: trabajo.",
+        "chunche: cosa, cacharro."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "¡Pura vida! El español de Costa Rica",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Acento y palabras ticas."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en San José",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla costarricense."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "¡Pura vida, mae!",
+        "correcta": true,
+        "explicacion": "Es un saludo costarricense coloquial. Correcto entre amigos."
+      },
+      {
+        "frase": "Llévensen los libros a casa.",
+        "correcta": false,
+        "explicacion": "Añadir «-n» al pronombre («llévensen») es un vulgarismo. Lo correcto es «llévense»."
+      }
+    ]
+  },
+  {
+    "id": "pa",
+    "nombre": "Panamá",
+    "grupo": "Centroamérica",
+    "bandera": "🇵🇦",
+    "color": "#93B5E3",
+    "intro": "Panamá une América del Norte y del Sur. Su español es caribeño y tiene muchas palabras que vienen del inglés por la historia del canal.",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración y pérdida de la /s/.",
+        "La «ch» suena a veces como «sh»: «muchacho».",
+        "Pérdida de la «d» entre vocales: «cansao»."
+      ],
+      "gramatica": [
+        "Sin voseo: se usa «tú» y «usted».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "pelao / pelaa: niño, niña.",
+        "¡chuleta!: ¡caramba!",
+        "xopá: ¿qué pasa? (al revés: «pa-qué-xo»).",
+        "Palabras del inglés: «chantin» (casa humilde, de «shanty»)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Hablar panameño",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Vocabulario panameño."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Ciudad de Panamá",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Habla panameña."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Los pelaos se fueron a la playa.",
+        "correcta": true,
+        "explicacion": "«Pelao» es léxico panameño. Correcto en conversación."
+      },
+      {
+        "frase": "Ojalá que haiga sol mañana.",
+        "correcta": false,
+        "explicacion": "«Haiga» es un vulgarismo. Lo correcto es «haya»."
+      }
+    ]
+  },
+  {
+    "id": "cu",
+    "nombre": "Cuba",
+    "grupo": "Caribe",
+    "bandera": "🇨🇺",
+    "color": "#93B5E3",
+    "intro": "En Cuba se habla un español caribeño muy musical. En Cuba, como en Canarias, el autobús es la «guagua».",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración y pérdida de la /s/: «lo' niño'».",
+        "En el habla popular del oeste, la /r/ final de sílaba se asimila a la consonante siguiente: «cuerpo» suena «cueppo».",
+        "La /n/ final suena velar, como en «pan» muy nasal.",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "En las preguntas el sujeto va delante del verbo: «¿qué tú quieres?».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "guagua: autobús.",
+        "asere: amigo.",
+        "jaba: bolsa.",
+        "guajiro: campesino."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español de La Habana",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Acento cubano."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en La Habana",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla habanera."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "¿Qué tú quieres comer?",
+        "correcta": true,
+        "explicacion": "El sujeto antes del verbo en preguntas es un rasgo del español caribeño. Correcto."
+      },
+      {
+        "frase": "Yo no he vido esa película.",
+        "correcta": false,
+        "explicacion": "«Vido» es un vulgarismo. Lo correcto es «visto»."
+      },
+      {
+        "frase": "En un examen escrito: «Fui pa'l colegio temprano».",
+        "correcta": false,
+        "explicacion": "«Pa'l» se oye mucho al hablar, pero en un texto formal hay que escribir «para el»."
+      }
+    ]
+  },
+  {
+    "id": "do",
+    "nombre": "República Dominicana",
+    "grupo": "Caribe",
+    "bandera": "🇩🇴",
+    "color": "#EBA0BC",
+    "intro": "La República Dominicana comparte isla con Haití. Su español caribeño es rápido y alegre, con palabras como «chin» (un poquito).",
+    "rasgos": {
+      "pronunciacion": [
+        "Pérdida frecuente de la /s/ final.",
+        "En el Cibao, la /r/ y la /l/ final de sílaba se convierten en /i/ en el habla popular: «poique» por «porque».",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Sujeto delante del verbo en preguntas: «¿qué tú dices?».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "chin: un poquito.",
+        "colmado: tienda de barrio.",
+        "vaina: cosa.",
+        "guagua: autobús."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Hablar dominicano",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Acento y palabras dominicanas."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Santo Domingo",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Habla dominicana."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Dame un chin de agua.",
+        "correcta": true,
+        "explicacion": "«Chin» es léxico dominicano. Correcto en conversación."
+      },
+      {
+        "frase": "Nosotros juimos al colmado.",
+        "correcta": false,
+        "explicacion": "«Juimos» es un vulgarismo. Lo correcto es «fuimos»."
+      }
+    ]
+  },
+  {
+    "id": "pr",
+    "nombre": "Puerto Rico",
+    "grupo": "Caribe",
+    "bandera": "🇵🇷",
+    "color": "#EACB6E",
+    "intro": "Puerto Rico es una isla del Caribe asociada a Estados Unidos. Allí se habla español y también inglés, y los boricuas mezclan palabras de los dos.",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración de la /s/.",
+        "La /r/ final de sílaba puede sonar como /l/: «puelta» por «puerta».",
+        "La «rr» suena a veces velar, parecida a una «j».",
+        "Seseo y yeísmo."
+      ],
+      "gramatica": [
+        "Sujeto delante del verbo en preguntas: «¿qué tú piensas?».",
+        "«Ustedes» en lugar de «vosotros»."
+      ],
+      "vocabulario": [
+        "zafacón: papelera.",
+        "chavos: dinero.",
+        "chiringa: cometa.",
+        "boricua: puertorriqueño.",
+        "Préstamos del inglés: «janguear» (salir con amigos, de «hang out»)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español de Puerto Rico",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Acento boricua."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en San Juan",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla de San Juan."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Echa el papel en el zafacón.",
+        "correcta": true,
+        "explicacion": "«Zafacón» es léxico puertorriqueño y dominicano. Correcto."
+      },
+      {
+        "frase": "Ayer no truje el libro.",
+        "correcta": false,
+        "explicacion": "«Truje» es un vulgarismo. Lo correcto es «traje»."
+      }
+    ]
+  },
+  {
+    "id": "gq",
+    "nombre": "Guinea Ecuatorial",
+    "grupo": "África",
+    "bandera": "🇬🇶",
+    "color": "#A9CC8A",
+    "intro": "Guinea Ecuatorial es el único país de África con el español como lengua oficial. Lo hablan junto al fang, el bubi y otras lenguas.",
+    "rasgos": {
+      "pronunciacion": [
+        "Muchas personas no distinguen la «r» suave de la «rr»: «pero» y «perro» suenan parecido.",
+        "Entonación propia, influida por las lenguas africanas, que tienen tonos.",
+        "Unos hablantes distinguen /s/ y /θ/ (como en el centro de España) y otros sesean."
+      ],
+      "gramatica": [
+        "Se usa «vosotros», como en España: «vosotros sabéis».",
+        "Uso frecuente de «usted» como forma de respeto."
+      ],
+      "vocabulario": [
+        "malamba: bebida hecha con caña de azúcar.",
+        "ecuatoguineano: de Guinea Ecuatorial.",
+        "Palabras del fang y del bubi en la vida diaria."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El español en Guinea Ecuatorial",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: RTVE o Instituto Cervantes",
+        "descripcion": "El español en África."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Malabo",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Habla ecuatoguineana."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Vosotros habéis llegado pronto.",
+        "correcta": true,
+        "explicacion": "En Guinea Ecuatorial se usa «vosotros», como en buena parte de España. Correcto."
+      },
+      {
+        "frase": "Le di el libro a mis amigos.",
+        "correcta": false,
+        "explicacion": "Si son varios amigos, el pronombre debe ir en plural: «les di el libro a mis amigos»."
+      }
+    ]
+  },
+  {
+    "id": "ph",
+    "nombre": "Filipinas",
+    "grupo": "Asia",
+    "bandera": "🇵🇭",
+    "color": "#BCA7E0",
+    "intro": "El español fue lengua oficial en Filipinas durante siglos. Hoy lo hablan pocas personas, pero dejó miles de palabras en el tagalo y una lengua criolla: el chabacano.",
+    "rasgos": {
+      "pronunciacion": [
+        "En el tagalo, las palabras de origen español se adaptan: «silya» (silla), «kutsara» (cuchara).",
+        "El chabacano, que se habla en Zamboanga y Cavite, tiene una pronunciación muy parecida a la del español."
+      ],
+      "gramatica": [
+        "El chabacano es una lengua criolla: su vocabulario viene casi todo del español, pero su gramática es distinta.",
+        "En chabacano el pasado se marca con «ya»: «ya comé yo» (comí)."
+      ],
+      "vocabulario": [
+        "En tagalo: «mesa», «silya», «kutsara», «kumusta» (de «¿cómo está?»).",
+        "Las horas y los precios se dicen a menudo con números en español."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El chabacano de Zamboanga",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: Instituto Cervantes de Manila",
+        "descripcion": "Escuchad una lengua criolla de base española."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Hablantes de chabacano",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Grabación en chabacano."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "En chabacano se dice «ya comé yo» para decir «comí».",
+        "correcta": true,
+        "explicacion": "Es la gramática propia del chabacano, una lengua criolla. No es un error: es otra lengua."
+      },
+      {
+        "frase": "Yo vide un barco en Manila.",
+        "correcta": false,
+        "explicacion": "En español, «vide» es un vulgarismo. Lo correcto es «vi»."
+      }
+    ]
+  },
+  {
+    "id": "es-castellano-norte",
+    "nombre": "Castellano septentrional",
+    "etiqueta": "Castellano norte",
+    "zona": "Castilla y León",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#EACB6E",
+    "intro": "En Castilla y León nació el castellano. Aquí se distingue la «s» de la «z» y se usa «vosotros».",
+    "rasgos": {
+      "pronunciacion": [
+        "Distinción: «casa» (con /s/) y «caza» (con /θ/) suenan diferente.",
+        "La /s/ es apical: se pronuncia con la punta de la lengua.",
+        "En habla coloquial, la «d» final suena como «z»: «Valladoliz», «verdaz»."
+      ],
+      "gramatica": [
+        "Leísmo de persona masculino: «a Juan le vi ayer». La RAE lo admite.",
+        "Laísmo: «la dije que viniera». Es incorrecto; lo correcto es «le dije».",
+        "Condicional en lugar de subjuntivo en algunas zonas: «si vendrías…». Es incorrecto; se dice «si vinieras»."
+      ],
+      "vocabulario": [
+        "majo: simpático.",
+        "cacho: trozo.",
+        "tenada: cobertizo para el ganado."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista rural en Castilla y León",
+        "url": "PENDIENTE",
+        "fuente": "COSER (Corpus Oral y Sonoro del Español Rural)",
+        "descripcion": "Habla de un pueblo castellano."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "Leísmo, laísmo y loísmo",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Explicación de estos fenómenos."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "A tu hermano le vi en el parque.",
+        "correcta": true,
+        "explicacion": "Es leísmo masculino de persona, que la RAE admite. Correcto."
+      },
+      {
+        "frase": "La dije a María que viniera.",
+        "correcta": false,
+        "explicacion": "Es laísmo, incorrecto en todas las variedades. Lo correcto es «le dije a María»."
+      },
+      {
+        "frase": "Si vendrías antes, comeríamos juntos.",
+        "correcta": false,
+        "explicacion": "Después de «si» no va el condicional. Lo correcto es «si vinieras antes»."
+      }
+    ]
+  },
+  {
+    "id": "es-castellano-centro",
+    "nombre": "Castellano centro y madrileño",
+    "etiqueta": "Castellano centro",
+    "zona": "Madrid y Castilla-La Mancha",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#93B5E3",
+    "intro": "Madrid y Castilla-La Mancha hablan un castellano con distinción de «s» y «z», «vosotros» y una «j» muy fuerte.",
+    "rasgos": {
+      "pronunciacion": [
+        "Distinción entre /s/ y /θ/.",
+        "La «j» es fuerte, casi rasposa.",
+        "En habla coloquial: «Madriz» por «Madrid» y «cansao» por «cansado»."
+      ],
+      "gramatica": [
+        "Se usa «vosotros»: «vosotros sabéis».",
+        "Laísmo frecuente en el habla popular («la di un regalo»), que es incorrecto."
+      ],
+      "vocabulario": [
+        "mola: me gusta (coloquial).",
+        "currar: trabajar (coloquial).",
+        "zagal / zagala: chico, chica (en La Mancha).",
+        "castizo: típico de Madrid."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "El habla de Madrid",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: archivo de RTVE",
+        "descripcion": "Habla madrileña."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo de La Mancha",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla manchega."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Esa peli mola mucho.",
+        "correcta": true,
+        "explicacion": "Es léxico coloquial de España. Correcto en conversación, aunque no en un texto formal."
+      },
+      {
+        "frase": "La di un regalo a mi madre.",
+        "correcta": false,
+        "explicacion": "Es laísmo. Lo correcto es «le di un regalo a mi madre»."
+      }
+    ]
+  },
+  {
+    "id": "es-andaluz-occ",
+    "nombre": "Andaluz occidental",
+    "zona": "Sevilla, Cádiz, Huelva, Córdoba y Ceuta",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#EACB6E",
+    "intro": "El andaluz occidental es la variedad de Sevilla, Cádiz y Huelva. Con su seseo, su /s/ aspirada y su «ustedes», es muy parecido al español de Canarias y de América.",
+    "rasgos": {
+      "pronunciacion": [
+        "Seseo (en Sevilla y otras zonas): «casa» y «caza» se dicen con /s/. Es tan correcto como la distinción.",
+        "Ceceo (en partes de Cádiz, Huelva y el sur de Sevilla): «casa» y «caza» se dicen con /θ/. Es un rasgo dialectal, aunque en situaciones formales tiene menos prestigio que el seseo.",
+        "Aspiración de la /s/ final de sílaba: «lah casah», «ehto».",
+        "La «j» suena como una /h/ aspirada suave: «jamón».",
+        "Yeísmo: «pollo» y «poyo» suenan igual.",
+        "En la conversación relajada se pierde la «d» entre vocales: «cansao». En un registro formal se recomienda pronunciarla."
+      ],
+      "gramatica": [
+        "«Ustedes» en lugar de «vosotros»: «ustedes van», «ustedes tienen». Es la norma culta de Andalucía occidental, de Canarias y de América.",
+        "Mezclar «ustedes» con el verbo de «vosotros» («ustedes vais») es un uso popular que conviene evitar en registro formal.",
+        "Diminutivos en «-ito»: «chiquito», «ratito»."
+      ],
+      "vocabulario": [
+        "bulla: prisa («tengo bulla»).",
+        "malaje: persona sosa o antipática.",
+        "arrecío: muerto de frío.",
+        "quillo / chiquillo: chico (para llamar a alguien)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Seseo, ceceo y distinción en Andalucía",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: Dialectoteca del español o archivo de RTVE",
+        "descripcion": "Vídeo en el que se comparan las tres formas de pronunciar la «s» y la «z»."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo de Huelva",
+        "url": "PENDIENTE",
+        "fuente": "COSER (Corpus Oral y Sonoro del Español Rural)",
+        "descripcion": "Grabación real de una persona mayor. ¿Oís la /s/ aspirada?"
+      },
+      {
+        "tipo": "libro",
+        "titulo": "Rima LIII",
+        "autor": "Gustavo Adolfo Bécquer",
+        "obra": "Rimas",
+        "anio": "1871",
+        "url": "",
+        "fuente": "Poeta sevillano",
+        "descripcion": "Bécquer nació en Sevilla. Leed el fragmento en voz alta con seseo y con aspiración de la /s/: ¿cómo cambia el sonido?",
+        "texto": "Volverán las oscuras golondrinas\nen tu balcón sus nidos a colgar,\ny otra vez con el ala a sus cristales\njugando llamarán."
+      },
+      {
+        "tipo": "web",
+        "titulo": "El seseo en el Diccionario panhispánico de dudas",
+        "url": "https://www.rae.es/dpd/seseo",
+        "fuente": "Real Academia Española y ASALE",
+        "descripcion": "La explicación oficial: el seseo es una pronunciación culta y correcta."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Ustedes tienen razón, nos vamos ya.",
+        "correcta": true,
+        "explicacion": "Usar «ustedes» en lugar de «vosotros» es la norma culta de Andalucía occidental, Canarias y América. Correcto."
+      },
+      {
+        "frase": "Ayer dijistes que vendrías.",
+        "correcta": false,
+        "explicacion": "«Dijistes» es un vulgarismo en cualquier variedad. Lo correcto es «dijiste»."
+      },
+      {
+        "frase": "Tengo bulla, que llego tarde.",
+        "correcta": true,
+        "explicacion": "«Bulla» con el sentido de «prisa» es léxico andaluz. Correcto."
+      }
+    ]
+  },
+  {
+    "id": "es-andaluz-or",
+    "nombre": "Andaluz oriental",
+    "zona": "Granada, Jaén, Almería, Málaga y Melilla",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#EBA0BC",
+    "intro": "En el andaluz oriental la /s/ final se pierde, pero no pasa nada: la vocal se abre para marcar el plural.",
+    "rasgos": {
+      "pronunciacion": [
+        "Abertura de vocales: al perder la /s/, la vocal final se abre. «El niño» y «los niños» se distinguen por cómo suena la «o».",
+        "Aspiración de la «j»: «jamón» con /h/.",
+        "Hay zonas con distinción (gran parte de Jaén y Granada), con seseo y con ceceo.",
+        "Yeísmo."
+      ],
+      "gramatica": [
+        "Se usa «vosotros», a diferencia del andaluz occidental: «vosotros sabéis».",
+        "Diminutivos en «-ico» en algunas zonas, como Granada y Almería: «chiquitico»."
+      ],
+      "vocabulario": [
+        "tela: mucho («tela de gente»).",
+        "pipirrana: ensalada típica de Jaén.",
+        "remojón: ensalada de naranja y bacalao (Granada)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo de Granada",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Fijaos en las vocales abiertas."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "Las vocales abiertas del andaluz oriental",
+        "url": "PENDIENTE",
+        "fuente": "Dialectoteca del español",
+        "descripcion": "Explicación del fenómeno."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Vosotros sois de Jaén, ¿verdad?",
+        "correcta": true,
+        "explicacion": "En Andalucía oriental se usa «vosotros». Correcto."
+      },
+      {
+        "frase": "Me se ha olvidado el abrigo.",
+        "correcta": false,
+        "explicacion": "El orden «me se» es un vulgarismo. Lo correcto es «se me ha olvidado»."
+      }
+    ]
+  },
+  {
+    "id": "es-murciano",
+    "nombre": "Murciano",
+    "zona": "Región de Murcia",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#A9CC8A",
+    "intro": "El murciano es una variedad de tránsito: comparte rasgos con el andaluz oriental, con el aragonés y con el valenciano. ¡Acho!",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración o pérdida de la /s/ final, con vocales abiertas.",
+        "Pérdida de la «r» final de los infinitivos en el habla coloquial: «comé» por «comer».",
+        "Distinción entre /s/ y /θ/ en la mayor parte de la región."
+      ],
+      "gramatica": [
+        "Diminutivo en «-ico»: «ratico», «pequeñico».",
+        "Se usa «vosotros»."
+      ],
+      "vocabulario": [
+        "acho: muchacho (para llamar a alguien).",
+        "bajoca: judía verde.",
+        "esclafar: aplastar (del catalán).",
+        "zagal / zagala: chico, chica."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en la huerta de Murcia",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla murciana."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "Diccionario murciano",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Palabras murcianas."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Acho, espera un ratico.",
+        "correcta": true,
+        "explicacion": "«Acho» y el diminutivo «-ico» son rasgos del murciano. Correcto en conversación."
+      },
+      {
+        "frase": "Nosotros semos de Cartagena.",
+        "correcta": false,
+        "explicacion": "«Semos» es un vulgarismo. Lo correcto es «somos»."
+      }
+    ]
+  },
+  {
+    "id": "es-extremeno",
+    "nombre": "Extremeño",
+    "zona": "Extremadura",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#7EC8C0",
+    "intro": "El habla de Extremadura mezcla rasgos del sur (como la /s/ aspirada) con otros del occidente leonés, como el diminutivo «-ino».",
+    "rasgos": {
+      "pronunciacion": [
+        "Aspiración de la /s/ final y de la «j».",
+        "En zonas rurales se aspira la «h» inicial que viene de una «f» latina: «jacer» por «hacer», como en el castellano antiguo.",
+        "Seseo y ceceo en algunas zonas del sur de Badajoz."
+      ],
+      "gramatica": [
+        "Diminutivo en «-ino»: «pequeñino», «poquino».",
+        "Se usa «vosotros»."
+      ],
+      "vocabulario": [
+        "chacho: muchacho (para llamar a alguien).",
+        "chiquinino: muy pequeño.",
+        "Palabras compartidas con el leonés y con el portugués de la frontera."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo de Cáceres",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla extremeña."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "El habla de Extremadura",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Rasgos del extremeño."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Dame un poquino de pan.",
+        "correcta": true,
+        "explicacion": "El diminutivo «-ino» es un rasgo dialectal extremeño. Correcto."
+      },
+      {
+        "frase": "Haiga sol o no, iremos de excursión.",
+        "correcta": false,
+        "explicacion": "«Haiga» es un vulgarismo. Lo correcto es «haya»."
+      }
+    ]
+  },
+  {
+    "id": "es-canario",
+    "nombre": "Canario",
+    "zona": "Islas Canarias",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#BCA7E0",
+    "intro": "El español de Canarias es el puente entre España y América: muchos canarios emigraron a Cuba, Venezuela o Puerto Rico y su forma de hablar viajó con ellos.",
+    "rasgos": {
+      "pronunciacion": [
+        "Seseo en todas las islas.",
+        "Aspiración de la /s/: «lah papah».",
+        "La «j» suena como una /h/ suave.",
+        "La «ch» es suave, casi como una «y»: «muchacho»."
+      ],
+      "gramatica": [
+        "«Ustedes» en lugar de «vosotros»: «ustedes van». Es la norma culta canaria.",
+        "Se usa más el pretérito simple: «hoy fui a la playa»."
+      ],
+      "vocabulario": [
+        "guagua: autobús (como en Cuba y Puerto Rico).",
+        "papa: patata.",
+        "millo: maíz.",
+        "fisco: un poquito.",
+        "gofio: harina de cereales tostados."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en La Gomera",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla canaria."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "El silbo gomero",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: archivo de RTVE",
+        "descripcion": "Un lenguaje silbado que reproduce el español."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Ustedes vienen a la playa, ¿no?",
+        "correcta": true,
+        "explicacion": "«Ustedes» por «vosotros» es la norma culta de Canarias. Correcto."
+      },
+      {
+        "frase": "Cogemos la guagua a las ocho.",
+        "correcta": true,
+        "explicacion": "«Guagua» es la palabra canaria (y caribeña) para «autobús». Correcto."
+      },
+      {
+        "frase": "Nosotros semos de Tenerife.",
+        "correcta": false,
+        "explicacion": "«Semos» es un vulgarismo. Lo correcto es «somos»."
+      }
+    ]
+  },
+  {
+    "id": "es-catalan",
+    "nombre": "Español en contacto con el catalán y el valenciano",
+    "etiqueta": "Contacto con catalán",
+    "zona": "Cataluña, Comunidad Valenciana e Islas Baleares",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#E8A27C",
+    "intro": "En Cataluña, la Comunidad Valenciana y Baleares mucha gente habla dos lenguas: español y catalán o valenciano. Cada una deja huella en la otra.",
+    "rasgos": {
+      "pronunciacion": [
+        "La «l» suena oscura, más atrás en la boca: «sal», «alto».",
+        "La «d» final se ensordece: «Madrit», «verdat».",
+        "Las vocales «e» y «o» pueden sonar más abiertas."
+      ],
+      "gramatica": [
+        "Se usa «vosotros».",
+        "Algunos calcos del catalán, propios del registro coloquial: «hacer tarde» por «llegar tarde».",
+        "«Ves a por pan» en lugar de «ve a por pan»: es un error, el imperativo de «ir» es «ve»."
+      ],
+      "vocabulario": [
+        "plegar: terminar la jornada de trabajo.",
+        "ensaimada: dulce típico de Mallorca.",
+        "fallas: fiestas de Valencia."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Bilingües en Barcelona",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Español con acento catalán."
+      },
+      {
+        "tipo": "audio",
+        "titulo": "Conversación en Valencia",
+        "url": "PENDIENTE",
+        "fuente": "PRESEEA",
+        "descripcion": "Habla de Valencia."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Ves a por pan, por favor.",
+        "correcta": false,
+        "explicacion": "El imperativo de «ir» es «ve». Lo correcto es «ve a por pan»."
+      },
+      {
+        "frase": "Mi padre plega a las seis.",
+        "correcta": true,
+        "explicacion": "«Plegar» con el sentido de «terminar de trabajar» es un uso regional de Cataluña y Aragón. Correcto en conversación."
+      }
+    ]
+  },
+  {
+    "id": "es-gallego",
+    "nombre": "Español en contacto con el gallego",
+    "etiqueta": "Contacto con gallego",
+    "zona": "Galicia",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#7EC8C0",
+    "intro": "En Galicia se habla español y gallego. El español gallego se reconoce por su entonación cantarina y su pretérito simple: «¿ya comiste?».",
+    "rasgos": {
+      "pronunciacion": [
+        "Entonación muy característica, con subidas y bajadas.",
+        "Las vocales «e» y «o» pueden sonar más cerradas o más abiertas que en castellano.",
+        "Gheada en algunos hablantes: la «g» suena como una /h/ aspirada («hato» por «gato»)."
+      ],
+      "gramatica": [
+        "Se prefiere el pretérito simple: «¿ya comiste?» en lugar de «¿ya has comido?».",
+        "Diminutivo en «-iño»: «pequeniño».",
+        "Se usa «vosotros»."
+      ],
+      "vocabulario": [
+        "morriña: nostalgia de la tierra.",
+        "cachelos: patatas cocidas.",
+        "rapaz / rapaza: chico, chica."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo de Lugo",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla gallega en español."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "La entonación gallega",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "¿Por qué suena tan musical?"
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Hoy comí con mis abuelos.",
+        "correcta": true,
+        "explicacion": "Preferir el pretérito simple es un rasgo del español de Galicia (y de América). Correcto."
+      },
+      {
+        "frase": "Tengo morriña de mi pueblo.",
+        "correcta": true,
+        "explicacion": "«Morriña» viene del gallego y está en el diccionario. Correcto."
+      },
+      {
+        "frase": "Le dije a mis primos que vinieran.",
+        "correcta": false,
+        "explicacion": "Si son varios primos, el pronombre debe ser plural: «les dije a mis primos»."
+      }
+    ]
+  },
+  {
+    "id": "es-euskera",
+    "nombre": "Español en contacto con el euskera",
+    "etiqueta": "Contacto con euskera",
+    "zona": "País Vasco y Navarra",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#A9CC8A",
+    "intro": "El euskera es la lengua más antigua de Europa occidental y no se parece a ninguna otra. En el País Vasco y Navarra convive con el español.",
+    "rasgos": {
+      "pronunciacion": [
+        "La /s/ es muy apical y la «rr» muy fuerte.",
+        "Sonidos del euskera en palabras prestadas: «tx», «tz» («txoko», «pintxo»)."
+      ],
+      "gramatica": [
+        "Condicional en lugar de subjuntivo: «si tendría tiempo…». Es incorrecto; lo correcto es «si tuviera tiempo».",
+        "En el habla coloquial, el verbo puede ir al final: «pan, ¿compraste?».",
+        "Se usa «vosotros»."
+      ],
+      "vocabulario": [
+        "aita / ama: padre, madre.",
+        "agur: adiós.",
+        "aupa: hola, ¡ánimo!",
+        "sirimiri: llovizna (está en el diccionario).",
+        "pintxo: tapa."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo de Navarra",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla navarra."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "Palabras del euskera en español",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Préstamos vascos."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Si tendría tiempo, iría al monte.",
+        "correcta": false,
+        "explicacion": "Después de «si» no va el condicional. Lo correcto es «si tuviera tiempo»."
+      },
+      {
+        "frase": "Mañana hay sirimiri, coge el paraguas.",
+        "correcta": true,
+        "explicacion": "«Sirimiri» viene del euskera y está en el diccionario. Correcto."
+      },
+      {
+        "frase": "¡Aupa! ¿Qué tal estás?",
+        "correcta": true,
+        "explicacion": "«Aupa» es un saludo propio del País Vasco. Correcto en conversación."
+      }
+    ]
+  },
+  {
+    "id": "es-asturias-cantabria",
+    "nombre": "Asturias y Cantabria",
+    "zona": "Principado de Asturias y Cantabria",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#EBA0BC",
+    "intro": "En Asturias y Cantabria el español convive con el asturiano y el cántabro. Por eso se oye «guaje» o «pequeñuco».",
+    "rasgos": {
+      "pronunciacion": [
+        "Cierre de la «o» final en «u» en el habla popular: «guapu», «pelu».",
+        "Entonación con subidas al final de la frase."
+      ],
+      "gramatica": [
+        "Diminutivos: «-ín» en Asturias («guapín») y «-uco» en Cantabria («pequeñuco»).",
+        "Se prefiere el pretérito simple: «¿ya llegaste?».",
+        "Se usa «vosotros»."
+      ],
+      "vocabulario": [
+        "guaje / guaja: niño, niña (Asturias).",
+        "prestar: gustar («me presta»).",
+        "orbayu: llovizna (Asturias).",
+        "chigre: sidrería, bar (Asturias)."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo asturiano",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla asturiana."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "El cántabro o montañés",
+        "url": "PENDIENTE",
+        "fuente": "Por completar",
+        "descripcion": "Rasgos del habla cántabra."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "¡Qué guaje más majo!",
+        "correcta": true,
+        "explicacion": "«Guaje» es léxico asturiano. Correcto."
+      },
+      {
+        "frase": "Vosotros vinistes ayer.",
+        "correcta": false,
+        "explicacion": "La forma de «vosotros» es «vinisteis». «Vinistes» es un vulgarismo."
+      }
+    ]
+  },
+  {
+    "id": "es-aragon-rioja",
+    "nombre": "Aragón y La Rioja",
+    "zona": "Aragón y La Rioja",
+    "grupo": "España",
+    "bandera": "🇪🇸",
+    "color": "#BCA7E0",
+    "intro": "El español de Aragón y La Rioja tiene su propia música y palabras heredadas del aragonés, como «cierzo» o «ababol».",
+    "rasgos": {
+      "pronunciacion": [
+        "Entonación aragonesa, que alarga la última vocal de la frase.",
+        "Distinción entre /s/ y /θ/."
+      ],
+      "gramatica": [
+        "Diminutivo en «-ico»: «majico», «pequeñico».",
+        "Condicional en lugar de subjuntivo en La Rioja y zonas cercanas («si vendrías…»): es incorrecto.",
+        "Se usa «vosotros»."
+      ],
+      "vocabulario": [
+        "cierzo: viento frío del norte.",
+        "ababol: amapola.",
+        "rasmia: empuje, energía.",
+        "pozal: cubo.",
+        "maño / maña: aragonés, aragonesa."
+      ]
+    },
+    "recursos": [
+      {
+        "tipo": "audio",
+        "titulo": "Entrevista en un pueblo de Huesca",
+        "url": "PENDIENTE",
+        "fuente": "COSER",
+        "descripcion": "Habla aragonesa."
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "Palabras aragonesas",
+        "url": "PENDIENTE",
+        "fuente": "Por ejemplo: Aragón TV",
+        "descripcion": "Vocabulario aragonés."
+      }
+    ],
+    "quiz": [
+      {
+        "frase": "Hoy sopla un cierzo que corta.",
+        "correcta": true,
+        "explicacion": "«Cierzo» es una palabra aragonesa recogida en el diccionario. Correcto."
+      },
+      {
+        "frase": "¡Qué majico es tu perro!",
+        "correcta": true,
+        "explicacion": "El diminutivo «-ico» es un rasgo aragonés. Correcto."
+      },
+      {
+        "frase": "Si vendrías, te lo enseñaría.",
+        "correcta": false,
+        "explicacion": "Después de «si» no va el condicional. Lo correcto es «si vinieras»."
+      }
+    ]
+  }
+]

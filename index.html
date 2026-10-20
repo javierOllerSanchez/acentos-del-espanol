@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Los acentos del español</title>
+  <meta name="description" content="Mapa interactivo de las variedades del español en el mundo para 6.º de Primaria.">
+  <meta name="theme-color" content="#1e4f8a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#listaGrupos">Saltar a la lista de regiones</a>
+
+  <header class="cabecera">
+    <div class="marca" id="logo">
+      <span class="marca-logo" aria-hidden="true">ñ</span>
+      <span class="marca-texto">Los acentos<br>del español</span>
+    </div>
+
+    <div class="progreso" role="status">
+      <span id="progresoTexto">Habéis explorado 0 regiones</span>
+      <span class="progreso-barra" aria-hidden="true"><span id="progresoRelleno"></span></span>
+    </div>
+
+    <div class="equipo">
+      <span class="equipo-nombre" id="equipoNombre"></span>
+      <button type="button" class="btn btn-sutil" id="cambiarEquipo">Cambiar de equipo</button>
+    </div>
+  </header>
+
+  <main class="app" id="app">
+    <nav class="lista" id="lista" aria-labelledby="listaTitulo">
+      <div class="lista-cab">
+        <h2 id="listaTitulo">Regiones</h2>
+        <button type="button" class="btn-icono" id="cerrarLista" aria-label="Cerrar la lista">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="lista-grupos" id="listaGrupos" tabindex="-1"></div>
+    </nav>
+
+    <section class="mapa" id="mapa" aria-label="Mapa del mundo hispanohablante">
+      <svg id="svg" tabindex="0" role="application" aria-roledescription="mapa"
+           aria-label="Mapa del mundo. Usa las flechas para moverte, + y − para acercar o alejar. Para elegir una región, usa la lista de regiones."></svg>
+
+      <button type="button" class="btn btn-flotante" id="abrirLista" aria-controls="lista" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        Lista de regiones
+      </button>
+
+      <div class="controles" role="group" aria-label="Zoom del mapa">
+        <button type="button" class="btn-icono" id="zoomMas" aria-label="Acercar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <button type="button" class="btn-icono" id="zoomMenos" aria-label="Alejar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg>
+        </button>
+        <button type="button" class="btn btn-mundo" id="zoomMundo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.6 3.6 5.4 3.6 8.5s-1 5.9-3.6 8.5c-2.6-2.6-3.6-5.4-3.6-8.5s1-5.9 3.6-8.5z"/></svg>
+          Volver al mundo
+        </button>
+      </div>
+
+      <p class="leyenda" id="leyenda">Pulsa un país de color para descubrir cómo se habla allí. Acércate a España para ver sus regiones.</p>
+      <div class="tooltip" id="tooltip" hidden></div>
+      <p class="aviso-carga" id="avisoCarga">Cargando el mapa…</p>
+    </section>
+
+    <aside class="panel" id="panel" aria-labelledby="panelTitulo" hidden>
+      <div class="panel-asa" aria-hidden="true"></div>
+      <button type="button" class="btn-icono panel-cerrar" id="cerrarPanel" aria-label="Cerrar el panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="panel-cuerpo" id="panelCuerpo"></div>
+      <div class="panel-pie">
+        <button type="button" class="btn btn-primario" id="marcarVista" aria-pressed="false">Marcar como vista</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Identificación del equipo -->
+  <dialog class="dlg dlg-equipo" id="dlgEquipo" aria-labelledby="eqTitulo">
+    <form class="equipo-form" id="formEquipo" novalidate>
+      <span class="marca-logo marca-logo-grande" aria-hidden="true">ñ</span>
+      <h1 id="eqTitulo">Los acentos del español</h1>
+      <p class="equipo-intro">Más de 500 millones de personas hablan español, y cada lugar le pone su propia música. Antes de empezar, presentad a vuestro equipo.</p>
+
+      <label class="campo">
+        <span>Nombre del equipo</span>
+        <input type="text" id="eqNombre" maxlength="40" autocomplete="off" required>
+      </label>
+
+      <fieldset class="campo">
+        <legend>Integrantes</legend>
+        <div id="eqMiembros" class="eq-miembros"></div>
+        <button type="button" class="btn btn-sutil" id="eqAnadir">+ Añadir integrante</button>
+      </fieldset>
+
+      <p class="error" id="eqError" role="alert"></p>
+
+      <div class="equipo-acciones">
+        <button type="button" class="btn btn-sutil" id="eqCancelar" hidden>Cancelar</button>
+        <button type="submit" class="btn btn-primario btn-grande">Empezar a explorar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Visor de recursos -->
+  <dialog class="dlg dlg-media" id="dlgMedia" aria-labelledby="mediaTitulo">
+    <div class="dlg-cab">
+      <h2 id="mediaTitulo"></h2>
+      <button type="button" class="btn-icono" data-cerrar aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="media-cuerpo" id="mediaCuerpo"></div>
+  </dialog>
+
+  <!-- Acceso del profesorado -->
+  <dialog class="dlg dlg-pin" id="dlgPin" aria-labelledby="pinTitulo">
+    <form id="formPin">
+      <h2 id="pinTitulo">Acceso del profesorado</h2>
+      <label class="campo">
+        <span>PIN</span>
+        <input type="password" id="pinInput" inputmode="numeric" autocomplete="off">
+      </label>
+      <p class="error" id="pinError" role="alert"></p>
+      <div class="equipo-acciones">
+        <button type="button" class="btn btn-sutil" data-cerrar>Cancelar</button>
+        <button type="submit" class="btn btn-primario">Entrar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="dlg dlg-profe" id="dlgProfe" aria-labelledby="profeTitulo">
+    <div class="dlg-cab">
+      <h2 id="profeTitulo">Registro de este dispositivo</h2>
+      <button type="button" class="btn-icono" data-cerrar aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <p class="profe-estado" id="profeEstado"></p>
+    <div class="profe-acciones">
+      <button type="button" class="btn btn-primario" id="exportarEventos">Exportar eventos (CSV)</button>
+      <button type="button" class="btn" id="exportarResumen">Exportar resumen (CSV)</button>
+      <button type="button" class="btn" id="reenviar">Reintentar envío</button>
+      <button type="button" class="btn btn-peligro" id="borrarRegistro">Borrar registro</button>
+    </div>
+    <div class="profe-tabla" id="profeTabla"></div>
+  </dialog>
+</body>
+</html>
