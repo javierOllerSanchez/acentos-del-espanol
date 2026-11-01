@@ -6,7 +6,14 @@
     "bandera": "🇦🇷",
     "color": "#93B5E3",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "cita",
+        "texto": "«–Che, ¿y con la telegrafía sin hilos no puede marchar el motor? Vos tendrías que estudiarte ese invento. ¿Sabés que sería lindo? [...] –Ponéle un motorcito eléctrico y las pilas secas en el «fuselaje». [...] –El negocio es lindo, pero vidrioso. –¿Te decidís vos, Lucio? –¿La prensa?... y claro.., me pongo los pantalones viejos, no se me rompa el jetra... –¿Y vos, Silvio? –Yo rajo en cuanto la vieja duerma. [...] –Es demasiado cerca y la yuta tiene olfato. [...] –No macaniés... sos puro aspamento.»",
+        "referencia": "Arlt, R. (2018). *El juguete rabioso*. Biblioteca Digital ILCE.",
+        "url": "https://bibliotecadigital.ilce.edu.mx/Colecciones/LitHispano/_docs/JugueteRabioso_Artl.pdf"
+      }
+    ]
   },
   {
     "id": "bo",
@@ -15,7 +22,14 @@
     "bandera": "🇧🇴",
     "color": "#EACB6E",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "cita",
+        "texto": "«El taxista se mantuvo inmóvil cual monolito andino. Saqué diez pesos y se los puse en la palma de la mano... La potosina me estudió de reojo, tomó cuatro limones de una diminuta pirámide que había levantado sobre su aguayo multicolor, me los mostró sin proferir palabra... Lo seguí por las aceras atestadas de gente... trotaba y esquivaba a saltitos a las voluminosas cholas sentadas...»",
+        "referencia": "Recacoechea, J. de. (2022). *American Visa*. Internet Archive.",
+        "url": "https://archive.org/details/americanvisa00reca"
+      }
+    ]
   },
   {
     "id": "cl",
@@ -78,7 +92,20 @@
     "bandera": "🇻🇪",
     "color": "#EBA0BC",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "cita",
+        "texto": "«–¿Conoce usted a ese hombre? –Conocerlo, propiamente, no, porque es la primera vez que me lo topo; pero, por las señas que les he escuchado a los llaneros de por estos lados, malicio que debe ser uno a quien mentan el Brujeador... Piense usted lo peor que pueda pensar de un prójimo y agréguele todavía una miajita más, sin miedo de que se le pase la mano –respondió el bonguero–... Pero para mí que sus verdaderas ocupaciones son otras. Esas que usted mentó en denantes, que, por cierto, por poco no me hace usted trambucar el bongo.»",
+        "referencia": "Gallegos, R. (2000). *Doña Bárbara*. Biblioteca Virtual Miguel de Cervantes.",
+        "url": "https://www.cervantesvirtual.com/obra-visor/dona-barbara-ante-la-critica--0/html/ff600710-82b1-11df-acc7-002185ce6064_9.html"
+      },
+      {
+        "tipo": "cita",
+        "texto": "«-¿Eres colombiana de nacimiento? -Yo soy únicamente yanera... ¡Yo soy de todas estas yanuras! ¡Pa qué más patria si son tan beyas y tan dilatáas!,»",
+        "referencia": "Díaz Sánchez, R. (2022). *Mene*. Centro Nacional del Libro (Cenal).",
+        "url": "https://cenal.gob.ve/wp-content/uploads/2022/03/Coleccion-Bicentenario-Carabobo-36-Diaz-Sanchez-Ramon-Mene-%EF%80%A2-Cumboto.pdf"
+      }
+    ]
   },
   {
     "id": "mx",
@@ -87,7 +114,21 @@
     "bandera": "🇲🇽",
     "color": "#E8A27C",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "radio",
+        "titulo": "MVS Noticias 102.5 FM",
+        "descripcion": "Radio en directo desde Ciudad de México.",
+        "url": "https://radio.garden/listen/mvs-noticias-102-5-ciudad-de-mexico/MZj4iNA8",
+        "fuente": "Radio Garden"
+      },
+      {
+        "tipo": "periodico",
+        "titulo": "El Universal",
+        "descripcion": "Periódico de Ciudad de México.",
+        "url": "https://www.eluniversal.com.mx/"
+      }
+    ]
   },
   {
     "id": "us",
@@ -159,7 +200,15 @@
     "bandera": "🇨🇺",
     "color": "#93B5E3",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "radio",
+        "titulo": "Radio Caribe 101.7 FM (CMBY)",
+        "descripcion": "Radio cubana en directo.",
+        "url": "https://radio.garden/listen/-101-7-cmby-radio-caribe/PfXsnAC4",
+        "fuente": "Radio Garden"
+      }
+    ]
   },
   {
     "id": "do",
@@ -168,7 +217,20 @@
     "bandera": "🇩🇴",
     "color": "#EBA0BC",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "periodico",
+        "titulo": "Listín Diario",
+        "descripcion": "Noticias de la ciudad en el periódico de Santo Domingo.",
+        "url": "https://listindiario.com/la-republica/ciudad"
+      },
+      {
+        "tipo": "youtube",
+        "titulo": "COE: Al menos 30 comunidades resultaron afectadas por inundaciones",
+        "url": "https://www.youtube.com/watch?v=D_xwM3kZaN4",
+        "fuente": "Noticias SIN"
+      }
+    ]
   },
   {
     "id": "pr",
@@ -227,7 +289,15 @@
     "bandera": "🇪🇸",
     "color": "#EACB6E",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "radio",
+        "titulo": "Radio Betis 96.8 FM",
+        "descripcion": "Radio sevillana en directo.",
+        "url": "https://radio.garden/listen/radio-betis-fm-96-8/6Sb9kFCA",
+        "fuente": "Radio Garden"
+      }
+    ]
   },
   {
     "id": "es-andaluz-or",
@@ -237,7 +307,14 @@
     "bandera": "🇪🇸",
     "color": "#EBA0BC",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "youtube",
+        "titulo": "Almería Postureo",
+        "url": "https://www.youtube.com/watch?v=1X-TDVYXErY",
+        "fuente": "Almeria Postureo (YouTube)"
+      }
+    ]
   },
   {
     "id": "es-murciano",
@@ -300,7 +377,14 @@
     "bandera": "🇪🇸",
     "color": "#A9CC8A",
     "intro": "",
-    "recursos": []
+    "recursos": [
+      {
+        "tipo": "periodico",
+        "titulo": "El Diario Vasco",
+        "descripcion": "Noticias de Gipuzkoa.",
+        "url": "https://www.diariovasco.com/gipuzkoa/"
+      }
+    ]
   },
   {
     "id": "es-asturias-cantabria",

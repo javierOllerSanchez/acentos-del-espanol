@@ -52,6 +52,8 @@ const svgIcono = d => {
 };
 const ICO_PLAY = '<path d="M8 5.5v13l11-6.5z"/>';
 const ICO_PAUSA = '<path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/>';
+const ICO_MIC = '<rect x="9" y="2.5" width="6" height="11.5" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/>';
+const ICO_PERIODICO = '<path d="M4 5h13v13a2 2 0 0 0 2 2H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v9a2 2 0 0 1-2 2"/><path d="M7.5 8.5h6M7.5 12h6M7.5 15.5h4"/>';
 
 /* ===== Estado ===== */
 let REGIONES = [];
@@ -652,21 +654,56 @@ function pintarPanel(r) {
         h("h2", { id: "panelTitulo", tabindex: "-1" }, r.nombre),
         r.zona ? h("p", { class: "p-zona" }, r.zona) : null)),
     r.intro ? h("p", { class: "p-intro" }, r.intro) : null,
-    h("section", { class: "p-seccion", "aria-labelledby": "secRecursos" },
-      h("h3", { id: "secRecursos" }, "Recursos"),
-      r.recursos?.length
-        ? h("div", { class: "recursos" }, r.recursos.map(rec => tarjetaRecurso(rec, r)))
-        : h("div", { class: "p-vacio" },
-          h("p", {}, "Todavía no hay vídeos, audios ni enlaces para esta región."),
-          h("p", {}, "Pronto los añadiremos. ¡Mientras tanto, seguid explorando el mapa!"))),
+    ...seccionesRecursos(r),
   ].filter(Boolean));
   pintarReloj();
+}
+
+// Los recursos se agrupan por clase, en este orden; dentro de cada grupo se respeta el orden del JSON.
+const SECCIONES = [
+  { titulo: "Para escuchar", tipos: ["radio", "youtube", "vimeo", "audio"] },
+  { titulo: "Prensa", tipos: ["periodico"] },
+  { titulo: "Textos literarios", tipos: ["cita", "libro"], textos: true },
+  { titulo: "Otros recursos", tipos: null },
+];
+
+function seccionesRecursos(r) {
+  const recs = r.recursos || [];
+  if (!recs.length) {
+    return [h("section", { class: "p-seccion", "aria-labelledby": "secRecursos" },
+      h("h3", { id: "secRecursos" }, "Recursos"),
+      h("div", { class: "p-vacio" },
+        h("p", {}, "Todavía no hay vídeos, audios ni enlaces para esta región."),
+        h("p", {}, "Pronto los añadiremos. ¡Mientras tanto, seguid explorando el mapa!")))];
+  }
+  const usados = new Set();
+  return SECCIONES.map((s, i) => {
+    const lista = recs.filter(rec => !usados.has(rec) && (!s.tipos || s.tipos.includes(rec.tipo)));
+    lista.forEach(rec => usados.add(rec));
+    if (!lista.length) return null;
+    const citas = lista.filter(rec => rec.tipo === "cita");
+    return h("section", { class: "p-seccion", "aria-labelledby": `sec${i}` },
+      h("h3", { id: `sec${i}` }, s.titulo),
+      s.textos
+        ? h("div", { class: "textos" }, lista.map(rec => rec.tipo === "cita"
+          ? tarjetaCita(rec, r, citas.length > 1 ? citas.indexOf(rec) + 1 : 0)
+          : tarjetaRecurso(rec, r)))
+        : h("div", { class: "recursos" }, lista.map(rec => tarjetaRecurso(rec, r))));
+  });
 }
 
 /* =========================================================
    RECURSOS
    ========================================================= */
-const TIPOS = { youtube: "Vídeo", vimeo: "Vídeo", audio: "Audio", archivo: "Archivo", libro: "Lectura", web: "Página web" };
+const TIPOS = {
+  youtube: "Vídeo", vimeo: "Vídeo", audio: "Audio", radio: "Radio en directo", periodico: "Periódico",
+  archivo: "Archivo", libro: "Lectura", cita: "Texto literario", web: "Página web",
+};
+// Material audiovisual → icono de micrófono; prensa → icono de periódico.
+const CON_ICONO = ["radio", "youtube", "vimeo", "audio", "periodico"];
+const EXTERNOS = ["radio", "periodico"]; // estas webs no dejan mostrarse dentro de otra: se abren en pestaña nueva
+const ROMANOS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+const tituloDe = rec => rec.titulo || rec.referencia?.match(/\*([^*]+)\*/)?.[1] || TIPOS[rec.tipo] || "Recurso";
 const esImagen = u => /\.(png|jpe?g|gif|webp|svg|avif)(\?|#|$)/i.test(u);
 const esPdf = u => /\.pdf(\?|#|$)/i.test(u);
 const esPendiente = rec => !rec.url || rec.url === "PENDIENTE";
@@ -708,22 +745,52 @@ function tarjetaRecurso(rec, region) {
       h("span", { class: "etiqueta-pendiente" }, "Próximamente")));
   }
 
-  if (rec.tipo === "youtube" && idYoutube(rec.url)) {
-    const id = idYoutube(rec.url);
-    return h("article", { class: "tarjeta" },
-      h("button", {
-        type: "button", class: "miniatura", "aria-label": `Ver el vídeo: ${rec.titulo}`,
-        style: `background-image:url("https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg")`,
-        onclick: () => abrirMedia(rec, region),
-      }),
-      h("div", { class: "tarjeta-cuerpo" }, cab));
-  }
+  if (CON_ICONO.includes(rec.tipo)) return tarjetaEnlace(rec, region);
 
   const accion = { vimeo: "Ver el vídeo", audio: "Escuchar", web: "Ver la página", archivo: "Abrir el archivo" }[rec.tipo] || "Abrir";
   return h("article", { class: "tarjeta" }, h("div", { class: "tarjeta-cuerpo" }, cab,
     h("button", { type: "button", class: "btn btn-primario", onclick: () => abrirMedia(rec, region) },
       rec.tipo === "audio" || rec.tipo === "vimeo" ? svgIcono('<path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/>') : null,
       accion)));
+}
+
+// Tarjeta con el icono grande (micrófono o periódico), que también sirve para abrir el recurso
+function tarjetaEnlace(rec, region) {
+  const mic = rec.tipo !== "periodico";
+  const externo = EXTERNOS.includes(rec.tipo);
+  const url = urlSegura(rec.url);
+  const texto = { radio: "Escuchar en directo ↗", periodico: "Leer el periódico ↗", audio: "Escuchar" }[rec.tipo] || "Ver el vídeo";
+  const control = (attrs, ...hijos) => externo
+    ? h("a", { href: url, target: "_blank", rel: "noopener", onclick: () => registrar("Abrir recurso", region, `${TIPOS[rec.tipo]}: ${rec.titulo}`), ...attrs }, ...hijos)
+    : h("button", { type: "button", onclick: () => abrirMedia(rec, region), ...attrs }, ...hijos);
+  return h("article", { class: "tarjeta enlace" },
+    control({ class: `enlace-icono ${mic ? "mic" : "periodico"}`, tabindex: "-1", "aria-hidden": "true" },
+      svgIcono(mic ? ICO_MIC : ICO_PERIODICO)),
+    h("div", { class: "enlace-texto" },
+      h("span", { class: "tarjeta-tipo" }, TIPOS[rec.tipo]),
+      h("h4", {}, rec.titulo),
+      rec.descripcion ? h("p", {}, rec.descripcion) : null,
+      rec.fuente ? h("p", { class: "fuente" }, "Fuente: ", rec.fuente) : null,
+      control({ class: "btn btn-primario" }, texto)));
+}
+
+// Cita literaria con aspecto de página de libro antiguo. El texto y la referencia se muestran tal cual;
+// en la referencia, lo que va entre *asteriscos* sale en cursiva (el título de la obra).
+function paginaLibro(rec, n = 0) {
+  const url = urlSegura(rec.url);
+  const ref = (rec.referencia || "").split(/\*([^*]+)\*/).map((t, i) => (i % 2 ? h("i", {}, t) : t));
+  return h("figure", { class: "libro" },
+    n ? h("span", { class: "libro-numero", "aria-label": `Texto ${n}` }, ROMANOS[n - 1] || n) : null,
+    h("blockquote", { class: "libro-texto", cite: url }, h("p", {}, rec.texto || "")),
+    h("span", { class: "libro-floron", "aria-hidden": "true" }, "❦"),
+    h("figcaption", { class: "libro-referencia" }, ref,
+      url ? [" ", h("a", { href: url, target: "_blank", rel: "noopener" }, rec.url)] : null));
+}
+
+function tarjetaCita(rec, region, n) {
+  return h("article", { class: "cita" },
+    paginaLibro(rec, n),
+    h("button", { type: "button", class: "btn", onclick: () => abrirMedia(rec, region) }, "Leer en grande"));
 }
 
 const dlgMedia = $("#dlgMedia");
@@ -734,7 +801,7 @@ document.querySelectorAll("dialog").forEach(d => d.addEventListener("click", e =
 }));
 
 function abrirMedia(rec, region) {
-  $("#mediaTitulo").textContent = rec.titulo;
+  $("#mediaTitulo").textContent = tituloDe(rec);
   const cuerpo = $("#mediaCuerpo");
   const url = urlSegura(rec.url);
   let contenido;
@@ -763,6 +830,8 @@ function abrirMedia(rec, region) {
     contenido = h("blockquote", { class: "lectura lectura-grande", style: `--color-region:${region.color}` },
       h("p", {}, rec.texto || ""),
       h("footer", {}, [rec.autor, rec.obra && `«${rec.obra}»`, rec.anio].filter(Boolean).join(" · ")));
+  } else if (rec.tipo === "cita") {
+    contenido = h("div", { class: "libro-grande" }, paginaLibro(rec));
   } else {
     contenido = vistaWeb(rec, url);
   }
@@ -771,7 +840,7 @@ function abrirMedia(rec, region) {
     rec.fuente && rec.tipo !== "libro" ? h("div", { class: "media-pie" }, h("p", {}, "Fuente: ", rec.fuente),
       url && rec.tipo !== "web" ? h("a", { class: "btn btn-sutil", href: url, target: "_blank", rel: "noopener" }, "Abrir en pestaña nueva ↗") : null) : null].filter(Boolean));
   dlgMedia.showModal();
-  registrar("Abrir recurso", region, `${TIPOS[rec.tipo] || rec.tipo}: ${rec.titulo}`);
+  registrar("Abrir recurso", region, `${TIPOS[rec.tipo] || rec.tipo}: ${tituloDe(rec)}`);
 }
 
 // Muchas webs prohíben mostrarse dentro de otra (X-Frame-Options / CSP). El navegador no

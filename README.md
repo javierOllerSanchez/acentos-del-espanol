@@ -45,7 +45,9 @@ Después abre `http://localhost:8000` en el navegador. (Con Node también vale: 
 
 ## 3. Añadir contenidos (`data/regiones.json`)
 
-Las 34 regiones ya están creadas, pero **sin contenido**: cada una tiene una lista `recursos` vacía, preparada para rellenarla. Mientras esté vacía, la ventana de la región muestra «Todavía no hay vídeos, audios ni enlaces para esta región».
+Las 34 regiones ya están creadas. México, Cuba, República Dominicana, Venezuela, Bolivia, Argentina, el contacto con el euskera y los dos andaluces ya tienen material (radios, vídeos, periódicos y textos literarios); el resto tiene la lista `recursos` vacía, preparada para rellenarla. Mientras esté vacía, la ventana de la región muestra «Todavía no hay vídeos, audios ni enlaces para esta región».
+
+En la ventana de cada región los recursos se ordenan en apartados: **Para escuchar** (radio, vídeo y audio, con icono de micrófono), **Prensa** (con icono de periódico), **Textos literarios** y **Otros recursos**. Dentro de cada apartado se respeta el orden en que aparecen en el JSON.
 
 Así es una región:
 
@@ -67,25 +69,31 @@ Para añadir recursos, escríbelos dentro de `recursos`, separados por comas. Es
 
 ```json
 "recursos": [
+  { "tipo": "radio",   "titulo": "Radio Betis 96.8 FM", "url": "https://radio.garden/listen/…", "fuente": "Radio Garden", "descripcion": "Radio sevillana en directo." },
+  { "tipo": "periodico", "titulo": "El Universal", "url": "https://www.eluniversal.com.mx/" },
   { "tipo": "youtube", "titulo": "Hablantes de Buenos Aires", "url": "https://www.youtube.com/watch?v=XXXXXXXXXXX", "fuente": "RTVE", "descripcion": "Fijaos en cómo dicen «yo» y «calle»." },
   { "tipo": "vimeo",   "titulo": "Documental", "url": "https://vimeo.com/123456789" },
   { "tipo": "audio",   "titulo": "Entrevista", "url": "https://…/entrevista.mp3", "fuente": "COSER" },
   { "tipo": "archivo", "titulo": "Ficha de trabajo", "url": "archivos/ficha-argentina.pdf" },
   { "tipo": "web",     "titulo": "El voseo", "url": "https://www.rae.es/dpd/voseo", "fuente": "RAE" },
-  { "tipo": "libro",   "titulo": "Martín Fierro", "texto": "Aquí me pongo a cantar…", "autor": "José Hernández", "obra": "Martín Fierro", "anio": "1872" }
+  { "tipo": "libro",   "titulo": "Martín Fierro", "texto": "Aquí me pongo a cantar…", "autor": "José Hernández", "obra": "Martín Fierro", "anio": "1872" },
+  { "tipo": "cita",    "texto": "«…texto literal…»", "referencia": "Arlt, R. (2018). *El juguete rabioso*. Biblioteca Digital ILCE.", "url": "https://…/JugueteRabioso_Artl.pdf" }
 ]
 ```
 
-Solo son obligatorios `tipo`, `titulo` y `url` (en `libro`, `texto` en lugar de `url`). `fuente` y `descripcion` son opcionales.
+Solo son obligatorios `tipo`, `titulo` y `url` (en `libro`, `texto` en lugar de `url`; en `cita`, `texto` y `referencia` en lugar de `titulo`). `fuente` y `descripcion` son opcionales.
 
 | tipo | `url` | Cómo se ve |
 |---|---|---|
-| `youtube` | enlace normal de YouTube (`watch?v=`, `youtu.be/`, `shorts/`) | Miniatura. Al pulsarla se abre un visor grande con `youtube-nocookie.com`. El reproductor no se carga hasta que se pulsa. |
-| `vimeo` | `https://vimeo.com/123456789` | Visor grande. |
-| `audio` | enlace directo a un `.mp3` / `.ogg` | Reproductor propio en un visor grande. |
+| `radio` | página de la emisora (por ejemplo, en Radio Garden) | Tarjeta con icono de micrófono. Se abre en una pestaña nueva, porque estas webs no dejan mostrarse dentro de otra. |
+| `periodico` | página del periódico | Tarjeta con icono de periódico. Se abre en una pestaña nueva. |
+| `youtube` | enlace normal de YouTube (`watch?v=`, `youtu.be/`, `shorts/`) | Tarjeta con icono de micrófono. Al pulsarla se abre un visor grande con `youtube-nocookie.com`. El reproductor no se carga hasta que se pulsa. |
+| `vimeo` | `https://vimeo.com/123456789` | Tarjeta con icono de micrófono; visor grande. |
+| `audio` | enlace directo a un `.mp3` / `.ogg` | Tarjeta con icono de micrófono; reproductor propio en un visor grande. |
 | `archivo` | un PDF, una imagen u otro archivo | Los PDF y las imágenes se ven dentro de la página. El resto de archivos tiene un botón para abrirlos o descargarlos. |
 | `web` | cualquier página | Intenta mostrar una vista previa. Muchas webs (como la RAE) no dejan mostrarse dentro de otra página: entonces aparece una tarjeta con el botón «Abrir en pestaña nueva». |
 | `libro` | (sin url) | Tarjeta de lectura con una cita breve, y botón «Leer en grande» para la pizarra. |
+| `cita` | enlace de la referencia bibliográfica | Página con aspecto de libro antiguo: el `texto` tal cual, un florón y debajo la `referencia` seguida del enlace. Lo que va entre `*asteriscos*` en la referencia sale en cursiva (el título de la obra). Si una región tiene varias citas, se numeran (I, II…). Botón «Leer en grande» para la pizarra. |
 
 - **Archivos propios** (PDF, imágenes, audios): crea una carpeta `archivos/` en el repositorio, súbelos ahí y usa la ruta relativa (`archivos/nombre.pdf`). Evita espacios y tildes en los nombres de archivo.
 - Si pones `"url": "PENDIENTE"`, la tarjeta aparece como «Próximamente» y no se puede abrir. Sirve para dejar recursos anunciados.
